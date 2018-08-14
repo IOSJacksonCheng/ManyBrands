@@ -1,0 +1,130 @@
+//
+//  BrandPrefixHeader.pch
+//  ShangBiao
+//
+//  Created by shoubin cheng on 2018/8/14.
+//  Copyright © 2018年 Jackson cheng. All rights reserved.
+//
+
+#ifndef BrandPrefixHeader_pch
+#define BrandPrefixHeader_pch
+#import "UIColor+ChangeSixteenColor.h"
+#import "CSUtility.h"
+#import "HandleRequestTool.h"
+#import "InternetAddress.h"
+#import "CSColorAndFont.h"
+#import "CSNetworkingManager.h"
+#import "Masonry.h"
+#import "MBProgressHUD.h"
+#import "MJRefresh.h"
+
+//上架环境
+//#define TESTMODEL NO
+
+
+#define TESTMODEL YES
+//开发环境
+//#define CodeModel YES
+//测试环境
+#define CodeModel NO
+
+//版本号
+#define APPVERSION @"v1"
+
+#define GetDeveloperKey @"4e90889c63e1a97c29bc257a4e3e68a9"
+
+#define ImageURL @"http://images.test.kaiyigz.com"
+
+#define AESDecryptionKey @"48FqISGCNn$3FU^@"
+#define AESDecryptionIV @"lu$7TEx_UA3@_0KK"
+
+#define CSCID [[NSUserDefaults standardUserDefaults] objectForKey:@"CID"]
+#define csTimeDifferent [[NSUserDefaults standardUserDefaults] doubleForKey:@"csTimeDifferent"]
+#define CSAPPID [[NSUserDefaults standardUserDefaults] objectForKey:@"CSAPPID"]
+#define CSAPPIDVERSION [[NSUserDefaults standardUserDefaults] objectForKey:@"CSAPPIDVERSION"]
+#define CSToken [[NSUserDefaults standardUserDefaults] objectForKey:@"CSToken"]
+#define CSTokenExpireTime [[NSUserDefaults standardUserDefaults] objectForKey:@"CSTokenExpireTime"]
+
+#define CSUsername [[NSUserDefaults standardUserDefaults] objectForKey:@"username"]
+#define CSLoginNumber [[NSUserDefaults standardUserDefaults] stringForKey:@"csloginnumber"]
+#define CSLoginPassword [[NSUserDefaults standardUserDefaults] stringForKey:@"csloginpassword"]
+
+//版本号不带构建版本
+#define CURRENTVERSION_S      [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
+#define SuccessfulCode 0
+#define TokenFailureCode 10012
+#define NotSubmitCode 1004
+
+#define csCharacterIsBlank(message) [CSUtility characterIsBlankString:message]
+
+/** 判断是否为iphonex  */
+#define MyDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IPHONEXBOTTOMHEIGHT 22
+
+#define  PersonalNavigationBarHeight MyDevice_Is_iPhoneX ? 84:64
+
+#ifdef DEBUG
+#define CSLog(...)   NSLog(__VA_ARGS__)
+//    #define CSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define CSLog(...)
+#endif
+
+
+#define CSSubmitAgainHaveHappened [[NSUserDefaults standardUserDefaults] stringForKey:@"20001HaveHappened"]
+
+#define DeliveryGoodsListButtonNotification @"DeliveryGoodsListButtonNotification"
+#define CSDeliveryWaitGetState @"3"
+#define CSDeliveryWaitReserveState @"4"
+#define CSDeliveryWaitSendGoodsState @"5"
+#define CSDeliveryWaitSignState @"8"
+#define CSDeliveryHaveFinishedState @"9"
+
+#define CSlatitude @"latitude"
+#define CSlongitude @"longitude"
+
+#define DeliveryGoodsTitleTableViewCellTitle @"DeliveryGoodsTitleTableViewCell"
+
+#define WarehouseTableViewCellTitle @"WarehouseTableViewCell"
+
+#define ReceiveGoodsPersonTableViewCellTitle @"ReceiveGoodsPersonTableViewCell"
+
+/** 送货备注  */
+#define DeliverGoodsRemarkTableViewCellTitle @"DeliverGoodsRemarkTableViewCell"
+
+/**  商家备注 */
+#define DeliveryGoodsSellerRemarkTableViewCellTitle @"DeliveryGoodsSellerRemarkTableViewCellTitle"
+
+/** 客户留言  */
+#define DeliveryCustomRemarkTableViewCellTitle @"DeliveryCustomRemarkTableViewCellTitle"
+
+
+#define DeliveryGoodsMapTableViewCellTitle @"DeliveryGoodsMapTableViewCell"
+
+#define DeliveryButtonTableViewCellTitle @"DeliveryButtonTableViewCell"
+
+#define DeliveryGoodsRepeatTableViewCellTitle @"DeliveryGoodsRepeatTableViewCell"
+
+#define DeliveryGoodsInstallCellTitle @"DeliverGoodsInstallDetailTableViewCell"
+
+#define ladingsNormalButtonTitle @"提货正常"
+#define ladingsWrongButtonTitle @"提货异常"
+
+#define appointmentsNormalButtonTitle @"确定预约"
+#define appointmentsWrongButtonTitle @"取消预约"
+
+#define deliverysNormalButtonTitle @"确定配送"
+#define deliverysWrongButtonTitle @"取消配送"
+
+#define ordersignsNormalButtonTitle @"签收正常"
+#define ordersignsWrongButtonTitle @"签收异常"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+
+#endif /* BrandPrefixHeader_pch */
