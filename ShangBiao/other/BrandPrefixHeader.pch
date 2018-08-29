@@ -65,6 +65,9 @@
 
 #define  PersonalNavigationBarHeight MyDevice_Is_iPhoneX ? 84:64
 
+#define MainScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define MainScreenHeight [UIScreen mainScreen].bounds.size.height
 #ifdef DEBUG
 #define CSLog(...)   NSLog(__VA_ARGS__)
 //    #define CSLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);

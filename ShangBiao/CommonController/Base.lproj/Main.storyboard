@@ -81,10 +81,29 @@
                     <view key="view" contentMode="scaleToFill" id="0Jv-FR-IgG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-RY-fLS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EBY-Hr-YXh" id="Dgz-HY-TIs"/>
+                                    <outlet property="delegate" destination="EBY-Hr-YXh" id="4Rp-MB-iqi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6tl-RY-fLS" firstAttribute="leading" secondItem="JXp-Ed-PTH" secondAttribute="leading" id="Hmg-kg-GnD"/>
+                            <constraint firstItem="JXp-Ed-PTH" firstAttribute="bottom" secondItem="6tl-RY-fLS" secondAttribute="bottom" id="SDI-Iv-efx"/>
+                            <constraint firstItem="JXp-Ed-PTH" firstAttribute="trailing" secondItem="6tl-RY-fLS" secondAttribute="trailing" id="Y4x-7z-n8u"/>
+                            <constraint firstItem="6tl-RY-fLS" firstAttribute="top" secondItem="JXp-Ed-PTH" secondAttribute="top" id="jrk-66-sa1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JXp-Ed-PTH"/>
                     </view>
                     <navigationItem key="navigationItem" id="2c7-Cg-wWQ"/>
+                    <connections>
+                        <outlet property="homeTableView" destination="6tl-RY-fLS" id="8r0-H9-ZS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AH4-WJ-SbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,6 +210,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="g6l-He-A6M" customClass="CSCommonTabBarController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xK7-w4-NHw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -204,7 +224,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvs-HX-cbN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1348" y="882"/>
+            <point key="canvasLocation" x="-1724" y="880"/>
         </scene>
     </scenes>
 </document>

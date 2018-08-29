@@ -29,5 +29,5 @@
 #define csScreenHeight [[UIScreen mainScreen] bounds].size.height
 
 #define DotaImageName(name) [UIImage imageNamed:name]
-
+#define PlaceHolderImage [UIImage imageNamed:@""]
 #endif /* CSColorAndFont_h */
