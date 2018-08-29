@@ -11,5 +11,5 @@ pod 'AFNetworking', '~> 3.1.0'
  pod 'Masonry', '~> 1.0.1'
  pod 'IQKeyboardManager', '~> 4.0.3'
  pod  'MJRefresh', '~> 3.1.0'
-
+pod 'SDWebImage', '~> 4.0'
 end

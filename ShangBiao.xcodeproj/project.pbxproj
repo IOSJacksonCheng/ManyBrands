@@ -171,9 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				2334AC682122712E00694ED7 /* AppDelegate.h */,
+				2334AC692122712E00694ED7 /* AppDelegate.m */,
 				23F2A5152122A415004AC881 /* BrandPrefixHeader.pch */,
 				23F2A5162122A4D3004AC881 /* CSColorAndFont.h */,
-				2334AC692122712E00694ED7 /* AppDelegate.m */,
 				2334AC712122713000694ED7 /* Assets.xcassets */,
 				2334AC732122713000694ED7 /* LaunchScreen.storyboard */,
 				2334AC762122713000694ED7 /* Info.plist */,

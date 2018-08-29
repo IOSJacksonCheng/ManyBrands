@@ -9,6 +9,7 @@
 #import "HomePageViewController.h"
 
 @interface HomePageViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *homeTableView;
 
 @end
 
