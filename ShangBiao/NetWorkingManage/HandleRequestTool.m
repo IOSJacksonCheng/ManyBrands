@@ -10,7 +10,7 @@
 
 @implementation HandleRequestTool
 + (BOOL)requestFromPhoneIsSuccessfulWithResponse:(id)responseObject {
-    int state = [responseObject[@"errno"] intValue];
+    int state = [responseObject[@"status"] intValue];
     
     if (state == SuccessfulCode) {
         return YES;
@@ -33,6 +33,6 @@
     return NO;
 }
 + (id)requestSuccessGetResult:(id)responseObject {
-    return responseObject[@"result"];
+    return responseObject[@"data"];
 }
 @end

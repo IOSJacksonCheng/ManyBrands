@@ -15,53 +15,27 @@
 
 #define NotSubmitCode 1004
 
+#define CSBaseURL @"http://www.niusb.com"
+#define UploadURL @"index.php/api/uploadify"
 #define CSInternetFailure [CSUtility showWrongMessageWithTitle:@"网络错误，请检查网络."];
-#define CSShowWrongMessage [CSUtility showWrongMessageWithTitle:responseObject[@"errstr"]];
+#define CSShowWrongMessage [CSUtility showWrongMessageWithTitle:responseObject[@"msg"]];
 
 #define CSInternetRequestSuccessful [HandleRequestTool requestFromPhoneIsSuccessfulWithResponse:responseObject]
 
 #define CustomWrongMessage(message) [CSUtility showWrongMessageWithTitle:message];
 
 #define CSGetResult [HandleRequestTool requestSuccessGetResult:responseObject]
+/** 登录 */
+#define CSLoginURL @"index.php/api/login"
+/** 注册 */
+#define CSRegisterURL @"index.php/api/user/reg"
+/** 发送手机验证码 */
+#define CSGetCodeURL @"index.php/api/user/send_sms_reg_code"
+/** 获取首页广告 */
+#define CSHomePageADURL @"index.php/api/index/getad"
 
-#define SendGoodsCountStatistisURL @"statistics"
+/** 产品明细 */
+#define CSProductListURL @"index.php/api/goods"
 
-#define HaveFinishedSummaryURL @"summary"
-
-#define SendGoodsDetailInfomationURL @"order"
-
-#define GetMissionURL @"ladings"
-
-#define AppointmentsURL @"appointments"
-
-#define DeliverysURL @"deliverys"
-
-#define OrderSignsURL @"ordersigns"
-
-#define GetCaptchasURL @"captchas"
-
-#define CheckCaptchURL @"checkcaptchas"
-
-#define RegisterURL @"users"
-
-#define RebackPasswordURL @"passwords"
-
-#define LoginInURL @"logins"
-
-#define TrackMessageURL @"track"
-
-#define RefreshLocationsURL @"locations"
-
-#define ConvertsLocationsURL @"converts"
-
-#define ChangeCodeURL @"userpassword"
-
-#define GetServeTimeURL @"time"
-
-#define RefreshTokenURL @"token"
-
-#define RegisterTokenURL @"tokens"
-
-#define UploadURL @"uploads"
-
+#define CSProductDetailURL @"index.php/api/goods/goodsinfo"
 #endif /* InternetAddress_h */

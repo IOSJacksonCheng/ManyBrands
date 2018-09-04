@@ -12,9 +12,6 @@
 #import <CommonCrypto/CommonDigest.h>
 #import "AppDelegate.h"
 
-
-//#import "AESCipher.h"
-#import "GetSign.h"
 #import "CSCommonTabBarController.h"
 
 #define LOAD_LABEL                     NSLocalizedString(@"发生错误，请重新操作或退出当前界面",)
@@ -376,28 +373,6 @@
     return YES;
     
 }
-+ (void)convertLocationWithLat:(NSString *)lat WithLon:(NSString *)lon WithType:(NSString *)type WithGps:(GpsBlock)block {
-    NSMutableDictionary *para = @{}.mutableCopy;
-    
-    para[@"lng"] = lon;
-    
-    para[@"lat"] = lat;
-    
-    para[@"type"] = type;
-    
-    [CSNetworkingManager sendPostRequestWithUrl:ConvertsLocationsURL Parpmeters:para success:^(id responseObject) {
-        if (CSInternetRequestSuccessful) {
-        
-            block([NSString stringWithFormat:@"%@", CSGetResult[@"lng"]],[NSString stringWithFormat:@"%@", CSGetResult[@"lat"]]);
-           
-        }else {
-            CSShowWrongMessage
-        }
-    } failure:^(NSError *error) {
-        CSInternetFailure
-    }];
-    
-    
-}
+
 @end
 

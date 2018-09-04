@@ -29,23 +29,16 @@ typedef void(^GpsBlock)(NSString * lon, NSString * lat);
 + (NSString *)getFirstDayWithMonth:(NSString *)month;
 + (NSString *)getLastDayWithMonth:(NSString *)month;
 
-///** AES加密  */
-//+ (NSString *)encryptAESStringWithOriginalString:(NSString *)string;
-//
-///** aes解密  */
-//+ (NSString *)decryptAESStringWithOriginalString:(NSString *)string;
 
 + (UIViewController *)getCurrentViewController;
 
 +(NSString *)return8LetterAndNumber;
 + (NSString *) getCurrentTimeHour;
-//
-//+ (NSString *)encryptAESStringWithFixKeyWithOriginalString:(NSString *)string;
-//+ (NSString *)decryptAESStringWithFixKeyOriginalString:(NSString *)string;
+
 + (void)compareTimeGetDifferent;
 + (BOOL)judgeTimeIsValidWIthBeginTime:(NSString *)beginTime WithEndTime:(NSString *)endTime;
 + (UIImage *)compressImage:(UIImage *)image toByte:(NSUInteger)maxLength;
-+ (void)convertLocationWithLat:(NSString *)lat WithLon:(NSString *)lon WithType:(NSString *)type WithGps:(GpsBlock)block;
+
 
 @end
 

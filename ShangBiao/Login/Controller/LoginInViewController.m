@@ -7,8 +7,15 @@
 //
 
 #import "LoginInViewController.h"
-
+#import "RegisterViewController.h"
 @interface LoginInViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UITextField *codeTextField;
+@property (weak, nonatomic) IBOutlet UIButton *showCodeButton;
+- (IBAction)clickShowCodeButtonDone:(id)sender;
+
+- (IBAction)clickLoginButtonDone:(id)sender;
+- (IBAction)clickRegisterButtonDone:(id)sender;
 
 @end
 
@@ -16,22 +23,49 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"登录";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)clickShowCodeButtonDone:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        //show code
+        self.codeTextField.secureTextEntry = NO;
+        
+        NSString *str  = self.codeTextField.text;
+        
+        self.codeTextField.text = @"";
+        self.codeTextField.text = str;
+        
+    } else {
+        self.codeTextField.secureTextEntry = YES;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)clickLoginButtonDone:(id)sender {
+    if (csCharacterIsBlank(self.phoneTextField.text)|| csCharacterIsBlank(self.codeTextField.text)) {
+        CustomWrongMessage(@"请输入用户名或密码")
+        return;
+    }
+    NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
+    parameter[@"username"] = self.phoneTextField.text;
+    parameter[@"password"] = self.codeTextField.text;
+    [CSNetworkingManager sendPostRequestWithUrl:CSLoginURL Parpmeters:parameter success:^(id responseObject) {
+        if (CSInternetRequestSuccessful) {
+            [[NSUserDefaults standardUserDefaults] setValue: [NSString stringWithFormat:@"%@",CSGetResult] forKey:@"CSGetToken"];
+           
+            [[NSUserDefaults standardUserDefaults] setValue:self.phoneTextField.text forKey:@"CSName"];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            CSShowWrongMessage
+        }
+    } failure:^(NSError *error) {
+        CSInternetFailure
+    }];
 }
-*/
 
+- (IBAction)clickRegisterButtonDone:(id)sender {
+    RegisterViewController *new = [RegisterViewController new];
+    [self.navigationController pushViewController:new animated:YES];
+}
 @end

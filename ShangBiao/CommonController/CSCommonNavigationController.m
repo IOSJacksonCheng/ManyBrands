@@ -28,18 +28,12 @@
     attributes[NSForegroundColorAttributeName] = [UIColor whiteColor];
     attributes[NSFontAttributeName] = [UIFont systemFontOfSize:20];
     [bar setTitleTextAttributes:attributes];
-    //6.设置返回按钮的箭头
-//    [bar setBackIndicatorImage:[UIImage imageNamed:@"backWhiteItem"]];
-//    [bar setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"backWhiteItem"]];
-    //隐藏返回按钮的文字
-    //    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-    //                                                         forBarMetrics:UIBarMetricsDefault];
-//    UIBarButtonItem *navBarButtonAppearance = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
-//    
-//    [navBarButtonAppearance setTitleTextAttributes:@{
-//                                                     NSFontAttributeName:            [UIFont systemFontOfSize:0.1],
-//                                                     NSForegroundColorAttributeName: [UIColor clearColor] }
-//                                          forState:UIControlStateNormal];
+    UIBarButtonItem *navBarButtonAppearance = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]];
+    
+    [navBarButtonAppearance setTitleTextAttributes:@{
+                                                     NSFontAttributeName:            [UIFont systemFontOfSize:0.1],
+                                                     NSForegroundColorAttributeName: [UIColor clearColor] }
+                                          forState:UIControlStateNormal];
     
 }
 

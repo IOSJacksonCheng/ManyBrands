@@ -11,9 +11,7 @@
 @interface CSNetworkingManager : NSObject
 typedef void(^successBlock)(id responseObject);
 typedef void(^failureBlock)(NSError *error);
-typedef void(^refreshTokenSuccess)(id tokenObject);
-typedef void(^refreshTokenFailure)(NSError *error);
-typedef void(^tokenRequestBlock)(BOOL tokenRefresh);
+
 /** 发送get请求 */
 + (void)sendGetRequestWithUrl:(NSString *)urlStr parameters:(NSMutableDictionary *)paramDic success:(successBlock)success failure:(failureBlock)failure;
 
@@ -26,14 +24,5 @@ typedef void(^tokenRequestBlock)(BOOL tokenRefresh);
 /** 发送post上传图片请求 */
 + (void)sendPostForUploadImageWithUrl:(NSString *)urlStr headerImageFilePath:(NSString *)filePath fileName:(NSString *)fileName parpameters:(NSMutableDictionary *)paramDic success:(successBlock)success failure:(failureBlock)failure;
 
-+ (void)refreshTokenWithSuccessBlock:(refreshTokenSuccess)successToken WithFailure:(refreshTokenFailure)failureToken;
-
-+ (void)registerAPPToServerWithBlock:(tokenRequestBlock)tokenRefresh;
-
-+ (void)getSignServeTimeWithTime:(successBlock)success;
-
-//+ (void)sendGetRequestNoRemaindMessageWithUrl:(NSString *)urlStr parameters:(NSMutableDictionary *)paramDic success:(successBlock)success failure:(failureBlock)failure;
-
-//+ (void)sendDeleteRequestNoRemaindMessageWithUrl:(NSString *)urlStr WithParameters:(NSMutableDictionary *)paramDic success:(successBlock)success failure:(failureBlock)failure;
 
 @end
