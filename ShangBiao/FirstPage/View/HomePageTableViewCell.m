@@ -8,6 +8,7 @@
 
 #import "HomePageTableViewCell.h"
 #import "SearchResultViewController.h"
+#import "SystemSearchViewController.h"
 @interface HomePageTableViewCell()
 
 @property (weak, nonatomic) IBOutlet UIView *fabuView;
@@ -35,8 +36,48 @@
     
     self.jiaoyiView.layer.cornerRadius = 30;
     self.jiaoyiView.layer.masksToBounds = YES;
+    
+    UITapGestureRecognizer *fabuTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickFabuView)];
+    fabuTap.numberOfTapsRequired = 1;
+    fabuTap.numberOfTouchesRequired = 1;
+    
+    [self.fabuView addGestureRecognizer:fabuTap];
+    
+    UITapGestureRecognizer *zhuceTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickZhuceView)];
+    zhuceTap.numberOfTapsRequired = 1;
+    zhuceTap.numberOfTouchesRequired = 1;
+    
+    [self.zhuceView addGestureRecognizer:zhuceTap];
+    
+    UITapGestureRecognizer *chaxunTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickChaxunView)];
+    chaxunTap.numberOfTapsRequired = 1;
+    chaxunTap.numberOfTouchesRequired = 1;
+    
+    [self.chaxunView addGestureRecognizer:chaxunTap];
+    
+    
+    UITapGestureRecognizer *jiaoyiTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickJiaoyiView)];
+    jiaoyiTap.numberOfTapsRequired = 1;
+    jiaoyiTap.numberOfTouchesRequired = 1;
+    
+    [self.jiaoyiView addGestureRecognizer:jiaoyiTap];
+    
+    
+    
 }
-
+- (void)clickJiaoyiView {
+      [[CSUtility getCurrentViewController].tabBarController setSelectedIndex:1];
+}
+- (void)clickChaxunView {
+    SystemSearchViewController *new = [SystemSearchViewController new];
+    [[CSUtility getCurrentViewController].navigationController pushViewController:new animated:YES];
+}
+- (void)clickZhuceView {
+      [[CSUtility getCurrentViewController].tabBarController setSelectedIndex:3];
+}
+- (void)clickFabuView {
+    [[CSUtility getCurrentViewController].tabBarController setSelectedIndex:2];
+}
 - (IBAction)clickTypeButtonDone:(UIButton *)sender {
     //0商标名  1注册号  2 持有人
     //1.创建AlertController

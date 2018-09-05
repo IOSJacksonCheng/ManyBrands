@@ -111,7 +111,7 @@
 #pragma mark -- UITableViewDelegate/DataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.dataArray.count / 2 == 0) {
+    if (self.dataArray.count % 2 == 0) {
         return self.dataArray.count / 2;
     }
     return self.dataArray.count / 2 + 1;

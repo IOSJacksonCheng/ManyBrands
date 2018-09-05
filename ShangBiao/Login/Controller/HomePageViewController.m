@@ -14,6 +14,8 @@
 #import "HomePageTableViewCell.h"
 #import "HotProductTableViewCell.h"
 #import "HomePageBrandTableViewCell.h"
+
+#import "AllClassTypeViewController.h"
 CGFloat const AD_Height = 250;
 
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
@@ -253,7 +255,7 @@ CGFloat const AD_Height = 250;
             break;
             case 3:
         {
-            if (self.hotArray.count/2 != 0) {
+            if (self.hotArray.count%2 != 0) {
                 return self.hotArray.count/2 + 1;
             }
             return self.hotArray.count/2;
@@ -385,7 +387,8 @@ CGFloat const AD_Height = 250;
     return button;
 }
 - (void)clickMoreAdButton:(UIButton *)sender {
-  
+    AllClassTypeViewController *new = [AllClassTypeViewController new];
+    [self.navigationController pushViewController:new animated:YES];
 }
 #pragma mark -- UIScrollViewDelegate
 //滚动停止事件

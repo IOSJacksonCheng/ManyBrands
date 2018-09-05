@@ -25,6 +25,12 @@
 		234C30BB213D1D6E00C13551 /* HomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234C30B9213D1D6E00C13551 /* HomePageTableViewCell.xib */; };
 		23C56E3A213ED0D9008D519D /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E38213ED0D9008D519D /* SearchResultViewController.m */; };
 		23C56E3B213ED0D9008D519D /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C56E39213ED0D9008D519D /* SearchResultViewController.xib */; };
+		23C56E3F213F74DC008D519D /* AllClassTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E3D213F74DC008D519D /* AllClassTypeViewController.m */; };
+		23C56E40213F74DC008D519D /* AllClassTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C56E3E213F74DC008D519D /* AllClassTypeViewController.xib */; };
+		23C56E44213F7559008D519D /* AllClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E42213F7559008D519D /* AllClassCollectionViewCell.m */; };
+		23C56E45213F7559008D519D /* AllClassCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C56E43213F7559008D519D /* AllClassCollectionViewCell.xib */; };
+		23C56E4B213FAB4A008D519D /* SystemSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E49213FAB4A008D519D /* SystemSearchViewController.m */; };
+		23C56E4C213FAB4A008D519D /* SystemSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C56E4A213FAB4A008D519D /* SystemSearchViewController.xib */; };
 		23C8F956213D36E4001A1B7F /* HotProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C8F954213D36E4001A1B7F /* HotProductTableViewCell.m */; };
 		23C8F957213D36E4001A1B7F /* HotProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C8F955213D36E4001A1B7F /* HotProductTableViewCell.xib */; };
 		23C8F95B213D47DA001A1B7F /* HomePageBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C8F959213D47DA001A1B7F /* HomePageBrandTableViewCell.m */; };
@@ -78,6 +84,15 @@
 		23C56E37213ED0D9008D519D /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		23C56E38213ED0D9008D519D /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		23C56E39213ED0D9008D519D /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
+		23C56E3C213F74DC008D519D /* AllClassTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllClassTypeViewController.h; sourceTree = "<group>"; };
+		23C56E3D213F74DC008D519D /* AllClassTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllClassTypeViewController.m; sourceTree = "<group>"; };
+		23C56E3E213F74DC008D519D /* AllClassTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllClassTypeViewController.xib; sourceTree = "<group>"; };
+		23C56E41213F7559008D519D /* AllClassCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllClassCollectionViewCell.h; sourceTree = "<group>"; };
+		23C56E42213F7559008D519D /* AllClassCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllClassCollectionViewCell.m; sourceTree = "<group>"; };
+		23C56E43213F7559008D519D /* AllClassCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllClassCollectionViewCell.xib; sourceTree = "<group>"; };
+		23C56E48213FAB4A008D519D /* SystemSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemSearchViewController.h; sourceTree = "<group>"; };
+		23C56E49213FAB4A008D519D /* SystemSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemSearchViewController.m; sourceTree = "<group>"; };
+		23C56E4A213FAB4A008D519D /* SystemSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SystemSearchViewController.xib; sourceTree = "<group>"; };
 		23C8F953213D36E4001A1B7F /* HotProductTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotProductTableViewCell.h; sourceTree = "<group>"; };
 		23C8F954213D36E4001A1B7F /* HotProductTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotProductTableViewCell.m; sourceTree = "<group>"; };
 		23C8F955213D36E4001A1B7F /* HotProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotProductTableViewCell.xib; sourceTree = "<group>"; };
@@ -223,6 +238,12 @@
 				23C56E37213ED0D9008D519D /* SearchResultViewController.h */,
 				23C56E38213ED0D9008D519D /* SearchResultViewController.m */,
 				23C56E39213ED0D9008D519D /* SearchResultViewController.xib */,
+				23C56E3C213F74DC008D519D /* AllClassTypeViewController.h */,
+				23C56E3D213F74DC008D519D /* AllClassTypeViewController.m */,
+				23C56E3E213F74DC008D519D /* AllClassTypeViewController.xib */,
+				23C56E48213FAB4A008D519D /* SystemSearchViewController.h */,
+				23C56E49213FAB4A008D519D /* SystemSearchViewController.m */,
+				23C56E4A213FAB4A008D519D /* SystemSearchViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +269,9 @@
 				23C8F958213D47DA001A1B7F /* HomePageBrandTableViewCell.h */,
 				23C8F959213D47DA001A1B7F /* HomePageBrandTableViewCell.m */,
 				23C8F95A213D47DA001A1B7F /* HomePageBrandTableViewCell.xib */,
+				23C56E41213F7559008D519D /* AllClassCollectionViewCell.h */,
+				23C56E42213F7559008D519D /* AllClassCollectionViewCell.m */,
+				23C56E43213F7559008D519D /* AllClassCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -523,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C56E4C213FAB4A008D519D /* SystemSearchViewController.xib in Resources */,
 				2334AC752122713000694ED7 /* LaunchScreen.storyboard in Resources */,
 				234C3087213CD36700C13551 /* RegisterViewController.xib in Resources */,
 				23F2A52B2122AB64004AC881 /* LoginInViewController.xib in Resources */,
@@ -532,6 +557,8 @@
 				23C8F961213E2B3F001A1B7F /* ProductDetailViewController.xib in Resources */,
 				2334AC702122712E00694ED7 /* Main.storyboard in Resources */,
 				234C30BB213D1D6E00C13551 /* HomePageTableViewCell.xib in Resources */,
+				23C56E45213F7559008D519D /* AllClassCollectionViewCell.xib in Resources */,
+				23C56E40213F74DC008D519D /* AllClassTypeViewController.xib in Resources */,
 				23C8F95C213D47DA001A1B7F /* HomePageBrandTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F2A51F2122A8F6004AC881 /* CSCommonTabBarController.m in Sources */,
+				23C56E3F213F74DC008D519D /* AllClassTypeViewController.m in Sources */,
 				234C3086213CD36700C13551 /* RegisterViewController.m in Sources */,
 				23C56E3A213ED0D9008D519D /* SearchResultViewController.m in Sources */,
 				23F2A51E2122A8F6004AC881 /* CSBaseViewController.m in Sources */,
@@ -601,12 +629,14 @@
 				23F2A52A2122AB64004AC881 /* LoginInViewController.m in Sources */,
 				2334AC782122713000694ED7 /* main.m in Sources */,
 				234C30AC213CE7EC00C13551 /* MineViewController.m in Sources */,
+				23C56E44213F7559008D519D /* AllClassCollectionViewCell.m in Sources */,
 				234C30B1213D13DF00C13551 /* HomePageModel.m in Sources */,
 				23F2A50E2122A38B004AC881 /* CSUtility.m in Sources */,
 				23C8F964213E5D22001A1B7F /* UIView+CSSExtension.m in Sources */,
 				23C8F95B213D47DA001A1B7F /* HomePageBrandTableViewCell.m in Sources */,
 				2334AC6A2122712E00694ED7 /* AppDelegate.m in Sources */,
 				234C30B6213D180900C13551 /* CSParseManager.m in Sources */,
+				23C56E4B213FAB4A008D519D /* SystemSearchViewController.m in Sources */,
 				23F2A5142122A3A7004AC881 /* UIView+Extension.m in Sources */,
 				23F2A5132122A3A7004AC881 /* UIColor+ChangeSixteenColor.m in Sources */,
 			);
