@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class SendOutModel;
+
 @interface CSParseManager : NSObject
 + (NSMutableArray *)getHomeModelArray:(id)responseObject;
++ (NSMutableArray *)getSendOutModelArray:(id)responseObject;
++ (SendOutModel *)getSendOutPreciseModelArray:(id)responseObject;
++ (NSMutableArray *)getMySendOutListModelArray:(id)responseObject;
 @end

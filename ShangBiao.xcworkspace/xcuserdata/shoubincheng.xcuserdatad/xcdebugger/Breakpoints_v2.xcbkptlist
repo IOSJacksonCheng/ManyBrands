@@ -19,14 +19,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShangBiao/FirstPage/View/HotProductTableViewCell.m"
-            timestampString = "557843902.092225"
+            filePath = "ShangBiao/sendOut/Controller/SendOutViewController.m"
+            timestampString = "558886533.8463939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "-clickClassView:"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
+            landmarkName = "-clickSureSendOutButtonDone:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SendOutViewController clickSureSendOutButtonDone:]"
+                  moduleName = "ShangBiao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shoubincheng/Desktop/ShangBiao/ShangBiao/sendOut/Controller/SendOutViewController.m"
+                  timestampString = "558886533.953511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "338"
+                  endingLineNumber = "338"
+                  offsetFromSymbolStart = "2216">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[SendOutViewController clickSureSendOutButtonDone:]_block_invoke"
+                  moduleName = "ShangBiao"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shoubincheng/Desktop/ShangBiao/ShangBiao/sendOut/Controller/SendOutViewController.m"
+                  timestampString = "558886533.957513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

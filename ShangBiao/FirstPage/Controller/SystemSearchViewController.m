@@ -59,11 +59,17 @@ NSString * const selectColor = @"FD7F57";
     [self.backgroundScrollView addSubview:firstScrollView];
 
     firstScrollView.backgroundColor = csWhiteColor;
+    
     firstScrollView.showsVerticalScrollIndicator = NO;
+    
     firstScrollView.showsHorizontalScrollIndicator = NO;
+    
    firstScrollView.contentSize = CGSizeMake(MainScreenWidth, scrollViewHeight + 100);
+    
     firstScrollView.scrollEnabled = YES;
+    
     UILabel *classTitleLabel = [self getTitleLable:@"商品类别"];
+    
     [firstScrollView addSubview:classTitleLabel];
     
     [classTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -157,8 +163,11 @@ NSString * const selectColor = @"FD7F57";
     [self.backgroundScrollView addSubview:self.brandOrderTextField];
     
     self.brandPersonTextField = [[UITextField alloc] initWithFrame:CGRectMake(MainScreenWidth + 10, 10 + 40 + 10, MainScreenWidth - 20, 40)];
+    
     self.brandPersonTextField.placeholder = @"请输入申请人全称";
+    
     self.brandPersonTextField.borderStyle = UITextBorderStyleRoundedRect;
+    
     self.brandPersonTextField.font = csCharacterFont_14;
     
     [self.backgroundScrollView addSubview:self.brandPersonTextField];

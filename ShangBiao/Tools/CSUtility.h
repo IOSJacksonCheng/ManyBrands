@@ -35,10 +35,10 @@ typedef void(^GpsBlock)(NSString * lon, NSString * lat);
 +(NSString *)return8LetterAndNumber;
 + (NSString *) getCurrentTimeHour;
 
-+ (void)compareTimeGetDifferent;
 + (BOOL)judgeTimeIsValidWIthBeginTime:(NSString *)beginTime WithEndTime:(NSString *)endTime;
 + (UIImage *)compressImage:(UIImage *)image toByte:(NSUInteger)maxLength;
 
-
++ (void)showLoginViewController;
++(void) saveImage:(UIImage *)currentImage withName:(NSString *)imageName;
 @end
 

@@ -14,7 +14,7 @@
 #define TokenFailureCode 10012
 
 #define NotSubmitCode 1004
-
+#define CSImageBaseURL @"http://tmpic.tmkoo.com"
 #define CSBaseURL @"http://www.niusb.com"
 #define UploadURL @"index.php/api/uploadify"
 #define CSInternetFailure [CSUtility showWrongMessageWithTitle:@"网络错误，请检查网络."];
@@ -34,8 +34,26 @@
 /** 获取首页广告 */
 #define CSHomePageADURL @"index.php/api/index/getad"
 
-/** 产品明细 */
+/** 产品列表 */
 #define CSProductListURL @"index.php/api/goods"
 
+/** 产品明细 */
 #define CSProductDetailURL @"index.php/api/goods/goodsinfo"
+
+/** 标注册号/申请人查询 */
+#define CSBrandSearchURL @"index.php/api/entrust/getdata"
+
+/** 标注册号/申请人查询 */
+#define CSSendOutBrandURL @"index.php/api/entrust"
+/** 图片上传 */
+#define CSUploadImageURL @"index.php/api/uploadify"
+
+/** 我的注册 */
+#define CSMySendOutRegisterListURL @"index.php/api/user/register"
+
+/** 我的发布 */
+#define CSMySendOutListURL @"index.php/api/user/index"
+
+/** 申请人列表 */
+#define CSApplyPersonListURL @"index.php/api/register/getproposer"
 #endif /* InternetAddress_h */

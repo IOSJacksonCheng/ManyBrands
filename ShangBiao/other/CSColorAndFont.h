@@ -22,11 +22,11 @@
 #define cse3e3e3Color [UIColor colorWithHexString:@"e3e3e3"]
 #define csf1f1f1Color [UIColor colorWithHexString:@"f1f1f1"]
 #define cs999999Color [UIColor colorWithHexString:@"999999"]
-#define csNavigationBarColor [UIColor colorWithHexString:@"FDA528"]
+#define csNavigationBarColor [UIColor colorWithHexString:@"ff6347"]
 
 #define csMoneyLabelColor [UIColor colorWithHexString:@"CA1715"]
 #define csLineColor [UIColor colorWithHexString:@"F0F1F2"]
 
 #define DotaImageName(name) [UIImage imageNamed:name]
-#define PlaceHolderImage [UIImage imageNamed:@""]
+#define PlaceHolderImage [UIImage imageNamed:@"holdImage"]
 #endif /* CSColorAndFont_h */

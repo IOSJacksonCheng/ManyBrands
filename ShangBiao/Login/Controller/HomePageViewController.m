@@ -16,6 +16,7 @@
 #import "HomePageBrandTableViewCell.h"
 
 #import "AllClassTypeViewController.h"
+#import "CSTitleSearchView.h"
 CGFloat const AD_Height = 250;
 
 @interface HomePageViewController ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
@@ -72,8 +73,28 @@ CGFloat const AD_Height = 250;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"首页";
+    [self configNavigationBar];
     [self configTableView];
     [self sendGetRequestForAd];
+}
+- (void)configNavigationBar {
+    
+    CSTitleSearchView *searchView = [[CSTitleSearchView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 35)];
+    
+    searchView.intrinsicContentSize = CGSizeMake(self.view.width - 120, 35);
+    
+     self.navigationItem.titleView = searchView;
+    
+//    UIButton *button = [[UIButton alloc] init];
+//
+//    [button setBackgroundImage:DotaImageName(@"touzike") forState:UIControlStateNormal];
+    
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"投知客" style:UIBarButtonItemStylePlain target:self action:nil];
+    [leftItem setTitleTextAttributes:@{
+                                       NSFontAttributeName:            [UIFont systemFontOfSize:18],
+                                       NSForegroundColorAttributeName: csWhiteColor }
+                            forState:UIControlStateNormal];
+    self.navigationItem.leftBarButtonItem = leftItem;
 }
 - (void)configTableView {
     self.homeTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
@@ -296,7 +317,7 @@ CGFloat const AD_Height = 250;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
-        return 285.5;
+        return 230.5;
     } else if (indexPath.section == 2) {
         return 126;
     } else if (indexPath.section == 3) {

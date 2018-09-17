@@ -1,0 +1,13 @@
+//
+//  SendOutModel.m
+//  ShangBiao
+//
+//  Created by shoubin cheng on 2018/9/6.
+//  Copyright © 2018年 Jackson cheng. All rights reserved.
+//
+
+#import "SendOutModel.h"
+
+@implementation SendOutModel
+
+@end

@@ -12,6 +12,9 @@
 		2334AC722122713000694ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2334AC712122713000694ED7 /* Assets.xcassets */; };
 		2334AC752122713000694ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2334AC732122713000694ED7 /* LaunchScreen.storyboard */; };
 		2334AC782122713000694ED7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2334AC772122713000694ED7 /* main.m */; };
+		2342C51C214106B8003B682A /* SendOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2342C51A214106B8003B682A /* SendOutTableViewCell.m */; };
+		2342C51D214106B8003B682A /* SendOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2342C51B214106B8003B682A /* SendOutTableViewCell.xib */; };
+		2342C52021410C94003B682A /* SendOutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2342C51F21410C94003B682A /* SendOutModel.m */; };
 		234C3086213CD36700C13551 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C3084213CD36700C13551 /* RegisterViewController.m */; };
 		234C3087213CD36700C13551 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234C3085213CD36700C13551 /* RegisterViewController.xib */; };
 		234C30A0213CE7BA00C13551 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C309F213CE7BA00C13551 /* HomePageViewController.m */; };
@@ -23,6 +26,48 @@
 		234C30B6213D180900C13551 /* CSParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C30B5213D180900C13551 /* CSParseManager.m */; };
 		234C30BA213D1D6E00C13551 /* HomePageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C30B8213D1D6E00C13551 /* HomePageTableViewCell.m */; };
 		234C30BB213D1D6E00C13551 /* HomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234C30B9213D1D6E00C13551 /* HomePageTableViewCell.xib */; };
+		236C0D12214B973400FE58D4 /* RegisterFirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D10214B973400FE58D4 /* RegisterFirstStepViewController.m */; };
+		236C0D13214B973400FE58D4 /* RegisterFirstStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D11214B973400FE58D4 /* RegisterFirstStepViewController.xib */; };
+		236C0D1F214BA8E900FE58D4 /* SelectPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D1E214BA8E900FE58D4 /* SelectPhotoManager.m */; };
+		236C0D23214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D21214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.m */; };
+		236C0D24214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D22214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.xib */; };
+		236C0D28214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D26214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.m */; };
+		236C0D29214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D27214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.xib */; };
+		236C0D2D214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D2B214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.m */; };
+		236C0D2E214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D2C214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.xib */; };
+		236C0D32214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D30214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.m */; };
+		236C0D33214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D31214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.xib */; };
+		236C0D37214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D35214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.m */; };
+		236C0D38214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D36214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib */; };
+		236C0D3C214BD4AE00FE58D4 /* RegisterSecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D3A214BD4AE00FE58D4 /* RegisterSecondStepViewController.m */; };
+		236C0D3D214BD4AE00FE58D4 /* RegisterSecondStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D3B214BD4AE00FE58D4 /* RegisterSecondStepViewController.xib */; };
+		236C0D42214F7EE600FE58D4 /* CSTitleSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D41214F7EE600FE58D4 /* CSTitleSearchView.m */; };
+		236C0D46214F9EE000FE58D4 /* MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D44214F9EE000FE58D4 /* MineTableViewCell.m */; };
+		236C0D47214F9EE000FE58D4 /* MineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D45214F9EE000FE58D4 /* MineTableViewCell.xib */; };
+		236C0D4A214FA72700FE58D4 /* TwoKindsSendOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D49214FA72700FE58D4 /* TwoKindsSendOutViewController.m */; };
+		236C0D58214FC8EB00FE58D4 /* SendOutBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D56214FC8EB00FE58D4 /* SendOutBrandViewController.m */; };
+		236C0D59214FC8EB00FE58D4 /* SendOutBrandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D57214FC8EB00FE58D4 /* SendOutBrandViewController.xib */; };
+		236C0D5D214FCEC700FE58D4 /* SendOutBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D5B214FCEC700FE58D4 /* SendOutBrandTableViewCell.m */; };
+		236C0D5E214FCEC700FE58D4 /* SendOutBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D5C214FCEC700FE58D4 /* SendOutBrandTableViewCell.xib */; };
+		236C0D62214FDADA00FE58D4 /* MySendOutBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D60214FDADA00FE58D4 /* MySendOutBrandViewController.m */; };
+		236C0D63214FDADA00FE58D4 /* MySendOutBrandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D61214FDADA00FE58D4 /* MySendOutBrandViewController.xib */; };
+		236C0D67214FDAEF00FE58D4 /* MyRegisterBrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D65214FDAEF00FE58D4 /* MyRegisterBrandViewController.m */; };
+		236C0D68214FDAEF00FE58D4 /* MyRegisterBrandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D66214FDAEF00FE58D4 /* MyRegisterBrandViewController.xib */; };
+		236C0D6C214FDB4000FE58D4 /* ApplyPersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D6A214FDB4000FE58D4 /* ApplyPersonListViewController.m */; };
+		236C0D6D214FDB4000FE58D4 /* ApplyPersonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D6B214FDB4000FE58D4 /* ApplyPersonListViewController.xib */; };
+		236C0D71214FDC9500FE58D4 /* MySendOutBrandTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D6F214FDC9500FE58D4 /* MySendOutBrandTableViewCell.m */; };
+		236C0D72214FDC9500FE58D4 /* MySendOutBrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D70214FDC9500FE58D4 /* MySendOutBrandTableViewCell.xib */; };
+		236C0D75214FDCB600FE58D4 /* MySendOutListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D74214FDCB600FE58D4 /* MySendOutListModel.m */; };
+		236C0D79214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D77214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.m */; };
+		236C0D7A214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D78214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.xib */; };
+		236C0D7D214FE40C00FE58D4 /* ApplyPersonListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D7C214FE40C00FE58D4 /* ApplyPersonListModel.m */; };
+		236C0D81214FE48600FE58D4 /* ApplyPersonListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D7F214FE48600FE58D4 /* ApplyPersonListTableViewCell.m */; };
+		236C0D82214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D80214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib */; };
+		236C0D86214FE9A700FE58D4 /* NewApplyPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D84214FE9A700FE58D4 /* NewApplyPersonViewController.m */; };
+		236C0D87214FE9A700FE58D4 /* NewApplyPersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D85214FE9A700FE58D4 /* NewApplyPersonViewController.xib */; };
+		236C0D8A214FEE3800FE58D4 /* CSImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D89214FEE3700FE58D4 /* CSImagePickerViewController.m */; };
+		2387E37A21424FB100A9C76C /* SendOutDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2387E37821424FB100A9C76C /* SendOutDataTableViewCell.m */; };
+		2387E37B21424FB100A9C76C /* SendOutDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2387E37921424FB100A9C76C /* SendOutDataTableViewCell.xib */; };
 		23C56E3A213ED0D9008D519D /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E38213ED0D9008D519D /* SearchResultViewController.m */; };
 		23C56E3B213ED0D9008D519D /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C56E39213ED0D9008D519D /* SearchResultViewController.xib */; };
 		23C56E3F213F74DC008D519D /* AllClassTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E3D213F74DC008D519D /* AllClassTypeViewController.m */; };
@@ -61,6 +106,11 @@
 		2334AC742122713000694ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2334AC762122713000694ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2334AC772122713000694ED7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2342C519214106B8003B682A /* SendOutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendOutTableViewCell.h; sourceTree = "<group>"; };
+		2342C51A214106B8003B682A /* SendOutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendOutTableViewCell.m; sourceTree = "<group>"; };
+		2342C51B214106B8003B682A /* SendOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendOutTableViewCell.xib; sourceTree = "<group>"; };
+		2342C51E21410C94003B682A /* SendOutModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendOutModel.h; sourceTree = "<group>"; };
+		2342C51F21410C94003B682A /* SendOutModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendOutModel.m; sourceTree = "<group>"; };
 		234C3083213CD36700C13551 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		234C3084213CD36700C13551 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		234C3085213CD36700C13551 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
@@ -81,6 +131,72 @@
 		234C30B7213D1D6E00C13551 /* HomePageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageTableViewCell.h; sourceTree = "<group>"; };
 		234C30B8213D1D6E00C13551 /* HomePageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageTableViewCell.m; sourceTree = "<group>"; };
 		234C30B9213D1D6E00C13551 /* HomePageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D0F214B973400FE58D4 /* RegisterFirstStepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepViewController.h; sourceTree = "<group>"; };
+		236C0D10214B973400FE58D4 /* RegisterFirstStepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepViewController.m; sourceTree = "<group>"; };
+		236C0D11214B973400FE58D4 /* RegisterFirstStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepViewController.xib; sourceTree = "<group>"; };
+		236C0D1D214BA8C900FE58D4 /* SelectPhotoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectPhotoManager.h; sourceTree = "<group>"; };
+		236C0D1E214BA8E900FE58D4 /* SelectPhotoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectPhotoManager.m; sourceTree = "<group>"; };
+		236C0D20214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepImageTableViewCell.h; sourceTree = "<group>"; };
+		236C0D21214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepImageTableViewCell.m; sourceTree = "<group>"; };
+		236C0D22214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepImageTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D25214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepExplainTableViewCell.h; sourceTree = "<group>"; };
+		236C0D26214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepExplainTableViewCell.m; sourceTree = "<group>"; };
+		236C0D27214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepExplainTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D2A214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepButtonTableViewCell.h; sourceTree = "<group>"; };
+		236C0D2B214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepButtonTableViewCell.m; sourceTree = "<group>"; };
+		236C0D2C214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepButtonTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D2F214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepApplyPersonTableViewCell.h; sourceTree = "<group>"; };
+		236C0D30214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepApplyPersonTableViewCell.m; sourceTree = "<group>"; };
+		236C0D31214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepApplyPersonTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D34214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepNameTableViewCell.h; sourceTree = "<group>"; };
+		236C0D35214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepNameTableViewCell.m; sourceTree = "<group>"; };
+		236C0D36214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepNameTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D39214BD4AE00FE58D4 /* RegisterSecondStepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSecondStepViewController.h; sourceTree = "<group>"; };
+		236C0D3A214BD4AE00FE58D4 /* RegisterSecondStepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSecondStepViewController.m; sourceTree = "<group>"; };
+		236C0D3B214BD4AE00FE58D4 /* RegisterSecondStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterSecondStepViewController.xib; sourceTree = "<group>"; };
+		236C0D40214F7EE600FE58D4 /* CSTitleSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTitleSearchView.h; sourceTree = "<group>"; };
+		236C0D41214F7EE600FE58D4 /* CSTitleSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSTitleSearchView.m; sourceTree = "<group>"; };
+		236C0D43214F9EE000FE58D4 /* MineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineTableViewCell.h; sourceTree = "<group>"; };
+		236C0D44214F9EE000FE58D4 /* MineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineTableViewCell.m; sourceTree = "<group>"; };
+		236C0D45214F9EE000FE58D4 /* MineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D48214FA72700FE58D4 /* TwoKindsSendOutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoKindsSendOutViewController.h; sourceTree = "<group>"; };
+		236C0D49214FA72700FE58D4 /* TwoKindsSendOutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoKindsSendOutViewController.m; sourceTree = "<group>"; };
+		236C0D55214FC8EB00FE58D4 /* SendOutBrandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendOutBrandViewController.h; sourceTree = "<group>"; };
+		236C0D56214FC8EB00FE58D4 /* SendOutBrandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendOutBrandViewController.m; sourceTree = "<group>"; };
+		236C0D57214FC8EB00FE58D4 /* SendOutBrandViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendOutBrandViewController.xib; sourceTree = "<group>"; };
+		236C0D5A214FCEC700FE58D4 /* SendOutBrandTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendOutBrandTableViewCell.h; sourceTree = "<group>"; };
+		236C0D5B214FCEC700FE58D4 /* SendOutBrandTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendOutBrandTableViewCell.m; sourceTree = "<group>"; };
+		236C0D5C214FCEC700FE58D4 /* SendOutBrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendOutBrandTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D5F214FDADA00FE58D4 /* MySendOutBrandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySendOutBrandViewController.h; sourceTree = "<group>"; };
+		236C0D60214FDADA00FE58D4 /* MySendOutBrandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySendOutBrandViewController.m; sourceTree = "<group>"; };
+		236C0D61214FDADA00FE58D4 /* MySendOutBrandViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySendOutBrandViewController.xib; sourceTree = "<group>"; };
+		236C0D64214FDAEF00FE58D4 /* MyRegisterBrandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRegisterBrandViewController.h; sourceTree = "<group>"; };
+		236C0D65214FDAEF00FE58D4 /* MyRegisterBrandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRegisterBrandViewController.m; sourceTree = "<group>"; };
+		236C0D66214FDAEF00FE58D4 /* MyRegisterBrandViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyRegisterBrandViewController.xib; sourceTree = "<group>"; };
+		236C0D69214FDB4000FE58D4 /* ApplyPersonListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyPersonListViewController.h; sourceTree = "<group>"; };
+		236C0D6A214FDB4000FE58D4 /* ApplyPersonListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyPersonListViewController.m; sourceTree = "<group>"; };
+		236C0D6B214FDB4000FE58D4 /* ApplyPersonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyPersonListViewController.xib; sourceTree = "<group>"; };
+		236C0D6E214FDC9500FE58D4 /* MySendOutBrandTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySendOutBrandTableViewCell.h; sourceTree = "<group>"; };
+		236C0D6F214FDC9500FE58D4 /* MySendOutBrandTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySendOutBrandTableViewCell.m; sourceTree = "<group>"; };
+		236C0D70214FDC9500FE58D4 /* MySendOutBrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySendOutBrandTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D73214FDCB600FE58D4 /* MySendOutListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySendOutListModel.h; sourceTree = "<group>"; };
+		236C0D74214FDCB600FE58D4 /* MySendOutListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySendOutListModel.m; sourceTree = "<group>"; };
+		236C0D76214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySendoutRegisterTableViewCell.h; sourceTree = "<group>"; };
+		236C0D77214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySendoutRegisterTableViewCell.m; sourceTree = "<group>"; };
+		236C0D78214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySendoutRegisterTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D7B214FE40C00FE58D4 /* ApplyPersonListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyPersonListModel.h; sourceTree = "<group>"; };
+		236C0D7C214FE40C00FE58D4 /* ApplyPersonListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyPersonListModel.m; sourceTree = "<group>"; };
+		236C0D7E214FE48600FE58D4 /* ApplyPersonListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplyPersonListTableViewCell.h; sourceTree = "<group>"; };
+		236C0D7F214FE48600FE58D4 /* ApplyPersonListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplyPersonListTableViewCell.m; sourceTree = "<group>"; };
+		236C0D80214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyPersonListTableViewCell.xib; sourceTree = "<group>"; };
+		236C0D83214FE9A700FE58D4 /* NewApplyPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewApplyPersonViewController.h; sourceTree = "<group>"; };
+		236C0D84214FE9A700FE58D4 /* NewApplyPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewApplyPersonViewController.m; sourceTree = "<group>"; };
+		236C0D85214FE9A700FE58D4 /* NewApplyPersonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewApplyPersonViewController.xib; sourceTree = "<group>"; };
+		236C0D88214FEE3700FE58D4 /* CSImagePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSImagePickerViewController.h; sourceTree = "<group>"; };
+		236C0D89214FEE3700FE58D4 /* CSImagePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSImagePickerViewController.m; sourceTree = "<group>"; };
+		2387E37721424FB100A9C76C /* SendOutDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendOutDataTableViewCell.h; sourceTree = "<group>"; };
+		2387E37821424FB100A9C76C /* SendOutDataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendOutDataTableViewCell.m; sourceTree = "<group>"; };
+		2387E37921424FB100A9C76C /* SendOutDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendOutDataTableViewCell.xib; sourceTree = "<group>"; };
 		23C56E37213ED0D9008D519D /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		23C56E38213ED0D9008D519D /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		23C56E39213ED0D9008D519D /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +304,8 @@
 		2334AC802122730C00694ED7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				236C0D1D214BA8C900FE58D4 /* SelectPhotoManager.h */,
+				236C0D1E214BA8E900FE58D4 /* SelectPhotoManager.m */,
 				23C8F963213E5D22001A1B7F /* UIView+CSSExtension.h */,
 				23C8F962213E5D22001A1B7F /* UIView+CSSExtension.m */,
 				23F2A5102122A3A7004AC881 /* UIColor+ChangeSixteenColor.h */,
@@ -198,6 +316,8 @@
 				23F2A50D2122A38B004AC881 /* CSUtility.m */,
 				234C30B4213D180900C13551 /* CSParseManager.h */,
 				234C30B5213D180900C13551 /* CSParseManager.m */,
+				236C0D88214FEE3700FE58D4 /* CSImagePickerViewController.h */,
+				236C0D89214FEE3700FE58D4 /* CSImagePickerViewController.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -272,6 +392,8 @@
 				23C56E41213F7559008D519D /* AllClassCollectionViewCell.h */,
 				23C56E42213F7559008D519D /* AllClassCollectionViewCell.m */,
 				23C56E43213F7559008D519D /* AllClassCollectionViewCell.xib */,
+				236C0D40214F7EE600FE58D4 /* CSTitleSearchView.h */,
+				236C0D41214F7EE600FE58D4 /* CSTitleSearchView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,6 +413,11 @@
 			children = (
 				234C30A4213CE7D600C13551 /* SendOutViewController.h */,
 				234C30A5213CE7D600C13551 /* SendOutViewController.m */,
+				236C0D48214FA72700FE58D4 /* TwoKindsSendOutViewController.h */,
+				236C0D49214FA72700FE58D4 /* TwoKindsSendOutViewController.m */,
+				236C0D55214FC8EB00FE58D4 /* SendOutBrandViewController.h */,
+				236C0D56214FC8EB00FE58D4 /* SendOutBrandViewController.m */,
+				236C0D57214FC8EB00FE58D4 /* SendOutBrandViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +425,8 @@
 		234C3090213CE18900C13551 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2342C51E21410C94003B682A /* SendOutModel.h */,
+				2342C51F21410C94003B682A /* SendOutModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +434,15 @@
 		234C3091213CE18900C13551 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2342C519214106B8003B682A /* SendOutTableViewCell.h */,
+				2342C51A214106B8003B682A /* SendOutTableViewCell.m */,
+				2342C51B214106B8003B682A /* SendOutTableViewCell.xib */,
+				2387E37721424FB100A9C76C /* SendOutDataTableViewCell.h */,
+				2387E37821424FB100A9C76C /* SendOutDataTableViewCell.m */,
+				2387E37921424FB100A9C76C /* SendOutDataTableViewCell.xib */,
+				236C0D5A214FCEC700FE58D4 /* SendOutBrandTableViewCell.h */,
+				236C0D5B214FCEC700FE58D4 /* SendOutBrandTableViewCell.m */,
+				236C0D5C214FCEC700FE58D4 /* SendOutBrandTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +495,12 @@
 			children = (
 				234C30A7213CE7E200C13551 /* RegisterBrandViewController.h */,
 				234C30A8213CE7E200C13551 /* RegisterBrandViewController.m */,
+				236C0D0F214B973400FE58D4 /* RegisterFirstStepViewController.h */,
+				236C0D10214B973400FE58D4 /* RegisterFirstStepViewController.m */,
+				236C0D11214B973400FE58D4 /* RegisterFirstStepViewController.xib */,
+				236C0D39214BD4AE00FE58D4 /* RegisterSecondStepViewController.h */,
+				236C0D3A214BD4AE00FE58D4 /* RegisterSecondStepViewController.m */,
+				236C0D3B214BD4AE00FE58D4 /* RegisterSecondStepViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -371,6 +515,21 @@
 		234C3099213CE1C100C13551 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				236C0D20214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.h */,
+				236C0D21214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.m */,
+				236C0D22214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.xib */,
+				236C0D25214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.h */,
+				236C0D26214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.m */,
+				236C0D27214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.xib */,
+				236C0D2A214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.h */,
+				236C0D2B214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.m */,
+				236C0D2C214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.xib */,
+				236C0D2F214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.h */,
+				236C0D30214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.m */,
+				236C0D31214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.xib */,
+				236C0D34214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.h */,
+				236C0D35214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.m */,
+				236C0D36214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +549,18 @@
 			children = (
 				234C30AA213CE7EC00C13551 /* MineViewController.h */,
 				234C30AB213CE7EC00C13551 /* MineViewController.m */,
+				236C0D5F214FDADA00FE58D4 /* MySendOutBrandViewController.h */,
+				236C0D60214FDADA00FE58D4 /* MySendOutBrandViewController.m */,
+				236C0D61214FDADA00FE58D4 /* MySendOutBrandViewController.xib */,
+				236C0D64214FDAEF00FE58D4 /* MyRegisterBrandViewController.h */,
+				236C0D65214FDAEF00FE58D4 /* MyRegisterBrandViewController.m */,
+				236C0D66214FDAEF00FE58D4 /* MyRegisterBrandViewController.xib */,
+				236C0D69214FDB4000FE58D4 /* ApplyPersonListViewController.h */,
+				236C0D6A214FDB4000FE58D4 /* ApplyPersonListViewController.m */,
+				236C0D6B214FDB4000FE58D4 /* ApplyPersonListViewController.xib */,
+				236C0D83214FE9A700FE58D4 /* NewApplyPersonViewController.h */,
+				236C0D84214FE9A700FE58D4 /* NewApplyPersonViewController.m */,
+				236C0D85214FE9A700FE58D4 /* NewApplyPersonViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -397,6 +568,10 @@
 		234C309C213CE1DA00C13551 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				236C0D73214FDCB600FE58D4 /* MySendOutListModel.h */,
+				236C0D74214FDCB600FE58D4 /* MySendOutListModel.m */,
+				236C0D7B214FE40C00FE58D4 /* ApplyPersonListModel.h */,
+				236C0D7C214FE40C00FE58D4 /* ApplyPersonListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +579,18 @@
 		234C309D213CE1DA00C13551 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				236C0D43214F9EE000FE58D4 /* MineTableViewCell.h */,
+				236C0D44214F9EE000FE58D4 /* MineTableViewCell.m */,
+				236C0D45214F9EE000FE58D4 /* MineTableViewCell.xib */,
+				236C0D6E214FDC9500FE58D4 /* MySendOutBrandTableViewCell.h */,
+				236C0D6F214FDC9500FE58D4 /* MySendOutBrandTableViewCell.m */,
+				236C0D70214FDC9500FE58D4 /* MySendOutBrandTableViewCell.xib */,
+				236C0D76214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.h */,
+				236C0D77214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.m */,
+				236C0D78214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.xib */,
+				236C0D7E214FE48600FE58D4 /* ApplyPersonListTableViewCell.h */,
+				236C0D7F214FE48600FE58D4 /* ApplyPersonListTableViewCell.m */,
+				236C0D80214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -547,19 +734,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236C0D24214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.xib in Resources */,
 				23C56E4C213FAB4A008D519D /* SystemSearchViewController.xib in Resources */,
+				236C0D63214FDADA00FE58D4 /* MySendOutBrandViewController.xib in Resources */,
 				2334AC752122713000694ED7 /* LaunchScreen.storyboard in Resources */,
 				234C3087213CD36700C13551 /* RegisterViewController.xib in Resources */,
+				236C0D38214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib in Resources */,
+				236C0D6D214FDB4000FE58D4 /* ApplyPersonListViewController.xib in Resources */,
 				23F2A52B2122AB64004AC881 /* LoginInViewController.xib in Resources */,
+				236C0D5E214FCEC700FE58D4 /* SendOutBrandTableViewCell.xib in Resources */,
 				23C8F957213D36E4001A1B7F /* HotProductTableViewCell.xib in Resources */,
 				2334AC722122713000694ED7 /* Assets.xcassets in Resources */,
+				236C0D68214FDAEF00FE58D4 /* MyRegisterBrandViewController.xib in Resources */,
+				236C0D33214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.xib in Resources */,
+				236C0D3D214BD4AE00FE58D4 /* RegisterSecondStepViewController.xib in Resources */,
+				236C0D87214FE9A700FE58D4 /* NewApplyPersonViewController.xib in Resources */,
 				23C56E3B213ED0D9008D519D /* SearchResultViewController.xib in Resources */,
 				23C8F961213E2B3F001A1B7F /* ProductDetailViewController.xib in Resources */,
 				2334AC702122712E00694ED7 /* Main.storyboard in Resources */,
+				2387E37B21424FB100A9C76C /* SendOutDataTableViewCell.xib in Resources */,
+				236C0D47214F9EE000FE58D4 /* MineTableViewCell.xib in Resources */,
+				236C0D59214FC8EB00FE58D4 /* SendOutBrandViewController.xib in Resources */,
 				234C30BB213D1D6E00C13551 /* HomePageTableViewCell.xib in Resources */,
+				2342C51D214106B8003B682A /* SendOutTableViewCell.xib in Resources */,
+				236C0D82214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib in Resources */,
+				236C0D2E214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.xib in Resources */,
+				236C0D13214B973400FE58D4 /* RegisterFirstStepViewController.xib in Resources */,
 				23C56E45213F7559008D519D /* AllClassCollectionViewCell.xib in Resources */,
+				236C0D7A214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.xib in Resources */,
 				23C56E40213F74DC008D519D /* AllClassTypeViewController.xib in Resources */,
+				236C0D72214FDC9500FE58D4 /* MySendOutBrandTableViewCell.xib in Resources */,
 				23C8F95C213D47DA001A1B7F /* HomePageBrandTableViewCell.xib in Resources */,
+				236C0D29214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,15 +818,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				23F2A51F2122A8F6004AC881 /* CSCommonTabBarController.m in Sources */,
+				236C0D46214F9EE000FE58D4 /* MineTableViewCell.m in Sources */,
 				23C56E3F213F74DC008D519D /* AllClassTypeViewController.m in Sources */,
+				236C0D67214FDAEF00FE58D4 /* MyRegisterBrandViewController.m in Sources */,
 				234C3086213CD36700C13551 /* RegisterViewController.m in Sources */,
+				236C0D1F214BA8E900FE58D4 /* SelectPhotoManager.m in Sources */,
 				23C56E3A213ED0D9008D519D /* SearchResultViewController.m in Sources */,
+				236C0D62214FDADA00FE58D4 /* MySendOutBrandViewController.m in Sources */,
 				23F2A51E2122A8F6004AC881 /* CSBaseViewController.m in Sources */,
+				236C0D7D214FE40C00FE58D4 /* ApplyPersonListModel.m in Sources */,
+				236C0D6C214FDB4000FE58D4 /* ApplyPersonListViewController.m in Sources */,
 				234C30BA213D1D6E00C13551 /* HomePageTableViewCell.m in Sources */,
 				234C30A9213CE7E200C13551 /* RegisterBrandViewController.m in Sources */,
+				236C0D32214BB8B000FE58D4 /* RegisterFirstStepApplyPersonTableViewCell.m in Sources */,
+				2387E37A21424FB100A9C76C /* SendOutDataTableViewCell.m in Sources */,
 				23F2A5092122A2A0004AC881 /* CSNetworkingManager.m in Sources */,
+				2342C52021410C94003B682A /* SendOutModel.m in Sources */,
+				236C0D79214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.m in Sources */,
 				234C30A3213CE7C900C13551 /* MakeDealViewController.m in Sources */,
 				23C8F960213E2B3F001A1B7F /* ProductDetailViewController.m in Sources */,
+				236C0D12214B973400FE58D4 /* RegisterFirstStepViewController.m in Sources */,
 				23F2A5202122A8F6004AC881 /* CSCommonNavigationController.m in Sources */,
 				23F2A50A2122A2A0004AC881 /* HandleRequestTool.m in Sources */,
 				234C30A6213CE7D600C13551 /* SendOutViewController.m in Sources */,
@@ -628,17 +845,32 @@
 				23C8F956213D36E4001A1B7F /* HotProductTableViewCell.m in Sources */,
 				23F2A52A2122AB64004AC881 /* LoginInViewController.m in Sources */,
 				2334AC782122713000694ED7 /* main.m in Sources */,
+				236C0D71214FDC9500FE58D4 /* MySendOutBrandTableViewCell.m in Sources */,
 				234C30AC213CE7EC00C13551 /* MineViewController.m in Sources */,
 				23C56E44213F7559008D519D /* AllClassCollectionViewCell.m in Sources */,
+				236C0D23214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.m in Sources */,
 				234C30B1213D13DF00C13551 /* HomePageModel.m in Sources */,
+				236C0D86214FE9A700FE58D4 /* NewApplyPersonViewController.m in Sources */,
+				236C0D58214FC8EB00FE58D4 /* SendOutBrandViewController.m in Sources */,
 				23F2A50E2122A38B004AC881 /* CSUtility.m in Sources */,
+				236C0D3C214BD4AE00FE58D4 /* RegisterSecondStepViewController.m in Sources */,
+				236C0D5D214FCEC700FE58D4 /* SendOutBrandTableViewCell.m in Sources */,
 				23C8F964213E5D22001A1B7F /* UIView+CSSExtension.m in Sources */,
 				23C8F95B213D47DA001A1B7F /* HomePageBrandTableViewCell.m in Sources */,
 				2334AC6A2122712E00694ED7 /* AppDelegate.m in Sources */,
+				236C0D4A214FA72700FE58D4 /* TwoKindsSendOutViewController.m in Sources */,
+				236C0D37214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.m in Sources */,
+				236C0D28214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.m in Sources */,
+				236C0D75214FDCB600FE58D4 /* MySendOutListModel.m in Sources */,
+				2342C51C214106B8003B682A /* SendOutTableViewCell.m in Sources */,
+				236C0D81214FE48600FE58D4 /* ApplyPersonListTableViewCell.m in Sources */,
 				234C30B6213D180900C13551 /* CSParseManager.m in Sources */,
+				236C0D8A214FEE3800FE58D4 /* CSImagePickerViewController.m in Sources */,
 				23C56E4B213FAB4A008D519D /* SystemSearchViewController.m in Sources */,
+				236C0D2D214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.m in Sources */,
 				23F2A5142122A3A7004AC881 /* UIView+Extension.m in Sources */,
 				23F2A5132122A3A7004AC881 /* UIColor+ChangeSixteenColor.m in Sources */,
+				236C0D42214F7EE600FE58D4 /* CSTitleSearchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,10 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CommonCrypto/CommonDigest.h>
 #import "AppDelegate.h"
-
+#import "LoginInViewController.h"
 #import "CSCommonTabBarController.h"
 
-#define LOAD_LABEL                     NSLocalizedString(@"发生错误，请重新操作或退出当前界面",)
+#define LOAD_LABEL                     NSLocalizedString(@"发生未知错误，请稍后再试",)
 @implementation CSUtility
 {
     MBProgressHUD *_mbProgressHUD;
@@ -373,6 +373,26 @@
     return YES;
     
 }
-
++ (void)showLoginViewController {
+    LoginInViewController *new = [LoginInViewController new];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:new];
+    
+    [[self getCurrentViewController] presentViewController:navi animated:YES completion:nil];
+}
++(void) saveImage:(UIImage *)currentImage withName:(NSString *)imageName
+{
+    NSData *imageData = UIImageJPEGRepresentation(currentImage, 0.5);
+    // 将图片写入文件
+    //获取Documents文件夹目录
+    NSArray *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath = [path objectAtIndex:0];
+    //指定新建文件夹路径
+    NSString *imageDocPath = [documentPath stringByAppendingPathComponent:@"images"];
+    BOOL exist = [[NSFileManager defaultManager] fileExistsAtPath:imageDocPath];
+    if (!exist) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:imageDocPath withIntermediateDirectories:NO attributes:nil error:nil];
+    }
+    [imageData writeToFile:[imageDocPath stringByAppendingPathComponent:imageName] atomically:NO];
+}
 @end
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RegisterFirstStepApplyPersonTableViewCell" id="KGk-i7-Jjw" customClass="RegisterFirstStepApplyPersonTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商标名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2B-Is-y32">
+                        <rect key="frame" x="15" y="14" width="60" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="ma9-7B-ig8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="为了你商标安全，请登录后在填写" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUX-Zi-Tr4">
+                        <rect key="frame" x="80" y="5" width="235" height="33.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WUX-Zi-Tr4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="5yP-A9-80g"/>
+                    <constraint firstItem="X2B-Is-y32" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CZQ-R8-vJM"/>
+                    <constraint firstItem="WUX-Zi-Tr4" firstAttribute="leading" secondItem="X2B-Is-y32" secondAttribute="trailing" constant="5" id="h4S-aU-zDm"/>
+                    <constraint firstAttribute="bottom" secondItem="WUX-Zi-Tr4" secondAttribute="bottom" constant="5" id="jjd-16-sdh"/>
+                    <constraint firstItem="X2B-Is-y32" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="o2j-YC-EId"/>
+                    <constraint firstAttribute="trailing" secondItem="WUX-Zi-Tr4" secondAttribute="trailing" constant="5" id="tGz-oI-XMZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="brandNameTextField" destination="WUX-Zi-Tr4" id="P0n-8P-4RW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

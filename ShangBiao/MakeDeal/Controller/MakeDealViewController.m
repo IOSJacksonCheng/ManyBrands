@@ -40,10 +40,12 @@
     self.title = @"交易";
     self.recordCheckType = @"price";
     self.recordOrder = @"2";
+    
     [self clickPriceButton];
     [self configTableView];
     [self sendGetRequestForNewInfomation];
 }
+
 - (void)sendGetRequestForNewInfomation {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     self.page = 1;

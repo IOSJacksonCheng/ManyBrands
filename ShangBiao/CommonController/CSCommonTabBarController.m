@@ -7,8 +7,8 @@
 //
 
 #import "CSCommonTabBarController.h"
-
-@interface CSCommonTabBarController ()
+#import "LoginInViewController.h"
+@interface CSCommonTabBarController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.delegate = self;
+self.delegate = self;
     for (UIViewController *vc in self.viewControllers)
     {
         UIImage *selectedImage = vc.tabBarItem.selectedImage;
@@ -40,19 +40,17 @@
     [barItem setTitleTextAttributes:selectedAttributes forState:UIControlStateSelected];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    //判断用户是否登陆
+    
+    if (csCharacterIsBlank(CSGetToken) && [viewController.tabBarItem.title isEqualToString:@"我的"]) {
+        [CSUtility showLoginViewController];
+        return NO;
+        
+    }
+    
+    
+    return YES;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

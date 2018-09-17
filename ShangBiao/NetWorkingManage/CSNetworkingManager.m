@@ -164,16 +164,12 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
         paramDic = [NSMutableDictionary dictionary];
     }
     
-    
-
-
-
-     NSString *url = [NSString stringWithFormat:@"%@/%@", [self getBaseUrl],UploadURL];
- CSLog(@"%@",url);
+    NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
+    CSLog(@"上传图片地址:%@",url);
     [manager POST:url parameters:paramDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         
-        [formData appendPartWithFileURL:[NSURL fileURLWithPath:filePath] name:@"file" fileName:fileName mimeType:@"image/png" error:nil];
+        [formData appendPartWithFileURL:[NSURL fileURLWithPath:filePath] name:@"img" fileName:fileName mimeType:@"image/png" error:nil];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
