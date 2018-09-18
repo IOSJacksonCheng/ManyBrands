@@ -18,6 +18,7 @@
 #import "RegisterFirstStepApplyPersonTableViewCell.h"
 #import "RegisterFirstStepNameTableViewCell.h"
 
+#import "ApplyPersonListViewController.h"
 @interface RegisterFirstStepViewController ()<UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UITextFieldDelegate>
 - (IBAction)clickNextStepButtonDone:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *firstStepTableView;
@@ -34,10 +35,12 @@
 @property (nonatomic, assign) BOOL chooseBlackButton;
 
 @property (nonatomic, strong) NSString *recordApplyPerson;
+@property (nonatomic, strong) NSString *recordApplyPersonId;
 @property (nonatomic, strong) NSString *recordBrandName;
 @end
 
 @implementation RegisterFirstStepViewController
+
 - (SelectPhotoManager *)photoManager {
     if (!_photoManager) {
         _photoManager = [[SelectPhotoManager alloc]init];
@@ -165,6 +168,16 @@
     } else if (indexPath.row == 5) {
         //黑白图样
         [self selectBlackWhitePhoto];
+    } else if (indexPath.row == 0) {
+        ApplyPersonListViewController *new = [ApplyPersonListViewController new];
+        new.fromRegister = YES;
+        [new setOnGetResult:^(NSString *memberId, NSString *memberName) {
+            self.recordApplyPerson = memberName;
+            self.recordApplyPersonId = memberId;
+            [self.firstStepTableView reloadData];
+        }];
+        
+        [self.navigationController pushViewController:new animated:YES];
     }
    
 }

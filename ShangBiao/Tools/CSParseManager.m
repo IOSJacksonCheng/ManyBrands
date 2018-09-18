@@ -11,7 +11,31 @@
 #import "HomePageModel.h"
 #import "SendOutModel.h"
 #import "MySendOutListModel.h"
+#import "ApplyPersonListModel.h"
 @implementation CSParseManager
++ (NSMutableArray *)getApplyPersonListModelArray:(id)responseObject {
+    if (![responseObject isKindOfClass:[NSArray class]]) {
+        CSLog(@"\n%s数据错误\n",__func__);
+        return nil;
+    }
+    NSArray *array = responseObject;
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (int i = 0 ; i < array.count ; i ++) {
+        
+        ApplyPersonListModel *model = [ApplyPersonListModel new];
+        model.personId = [self handelInternetString:array[i][@"id"]];
+        
+        model.receive_name = [self handelInternetString:array[i][@"receive_name"]];
+        
+        model.receive_phone = [self handelInternetString:array[i][@"receive_phone"]];
+        
+        model.templatename = [self handelInternetString:array[i][@"templatename"]];
+        
+        [mutableArray addObject:model];
+    }
+    
+    return mutableArray;
+}
 + (NSMutableArray *)getMySendOutListModelArray:(id)responseObject {
     if (![responseObject isKindOfClass:[NSArray class]]) {
         CSLog(@"\n%s数据错误\n",__func__);

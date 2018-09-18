@@ -28,5 +28,5 @@
 #define csLineColor [UIColor colorWithHexString:@"F0F1F2"]
 
 #define DotaImageName(name) [UIImage imageNamed:name]
-#define PlaceHolderImage [UIImage imageNamed:@"holdImage"]
+#define PlaceHolderImage [UIImage imageNamed:@""]
 #endif /* CSColorAndFont_h */

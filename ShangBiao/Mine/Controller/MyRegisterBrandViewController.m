@@ -27,7 +27,10 @@
     [self.listTableView registerNib:[UINib nibWithNibName:CSCellName(MySendoutRegisterTableViewCell) bundle:nil] forCellReuseIdentifier:CSCellName(MySendoutRegisterTableViewCell)];
 }
 - (void)sendGetRequestForListInfo {
-    [CSNetworkingManager sendGetRequestWithUrl:CSMySendOutListURL parameters:nil success:^(id responseObject) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    
+   
+    [CSNetworkingManager sendGetRequestWithUrl:CSMySendOutRegisterListURL parameters:parameters success:^(id responseObject) {
         if (CSInternetRequestSuccessful) {
             self.listArray = [CSParseManager getMySendOutListModelArray:CSGetResult];
             [self.listTableView reloadData];

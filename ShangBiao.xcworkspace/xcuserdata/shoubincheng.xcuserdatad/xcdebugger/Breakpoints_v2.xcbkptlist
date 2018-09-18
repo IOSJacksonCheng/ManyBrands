@@ -36,7 +36,7 @@
                   moduleName = "ShangBiao"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shoubincheng/Desktop/ShangBiao/ShangBiao/sendOut/Controller/SendOutViewController.m"
-                  timestampString = "558886533.953511"
+                  timestampString = "558973120.132365"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "338"
@@ -51,7 +51,7 @@
                   moduleName = "ShangBiao"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shoubincheng/Desktop/ShangBiao/ShangBiao/sendOut/Controller/SendOutViewController.m"
-                  timestampString = "558886533.957513"
+                  timestampString = "558973120.135327"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "340"
@@ -59,6 +59,22 @@
                   offsetFromSymbolStart = "64">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShangBiao/Mine/Controller/NewApplyPersonViewController.m"
+            timestampString = "558973268.37844"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "851"
+            endingLineNumber = "851"
+            landmarkName = "-clickSaveButtonDone:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

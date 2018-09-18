@@ -15,4 +15,5 @@
 + (NSMutableArray *)getSendOutModelArray:(id)responseObject;
 + (SendOutModel *)getSendOutPreciseModelArray:(id)responseObject;
 + (NSMutableArray *)getMySendOutListModelArray:(id)responseObject;
++ (NSMutableArray *)getApplyPersonListModelArray:(id)responseObject;
 @end

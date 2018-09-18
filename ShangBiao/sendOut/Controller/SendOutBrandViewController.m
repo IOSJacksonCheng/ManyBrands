@@ -340,7 +340,7 @@ NSString * const NumberType = @"1";
         return;
     }
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"token"] = CSGetToken;
+    
     for (int i = 0; i < self.listArray.count; i ++) {
         SendOutModel *model = self.listArray[i];
         parameters[[NSString stringWithFormat:@"goods_sn[%d]",i]] = model.regNo;

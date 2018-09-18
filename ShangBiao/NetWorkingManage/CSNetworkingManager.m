@@ -29,7 +29,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    
+    [manager.requestSerializer setValue:CSGetToken forHTTPHeaderField:@"token"];
    
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
@@ -66,7 +66,8 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
     }
   
     
-  
+    [manager.requestSerializer setValue:CSGetToken forHTTPHeaderField:@"token"];
+    
 
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
@@ -100,6 +101,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
         paramDic = [NSMutableDictionary dictionary];
     }
    
+    [manager.requestSerializer setValue:CSGetToken forHTTPHeaderField:@"token"];
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
     
@@ -131,6 +133,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
         paramDic = [NSMutableDictionary dictionary];
     }
     
+    [manager.requestSerializer setValue:CSGetToken forHTTPHeaderField:@"token"];
     
 
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
@@ -163,6 +166,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
     if (paramDic == nil) {
         paramDic = [NSMutableDictionary dictionary];
     }
+    [manager.requestSerializer setValue:CSGetToken forHTTPHeaderField:@"token"];
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
     CSLog(@"上传图片地址:%@",url);

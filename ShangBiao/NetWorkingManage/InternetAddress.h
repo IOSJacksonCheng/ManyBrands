@@ -56,4 +56,6 @@
 
 /** 申请人列表 */
 #define CSApplyPersonListURL @"index.php/api/register/getproposer"
+/** 添加申请人 */
+#define CSAddNewApplyPersonURL @"index.php/api/register/proposer"
 #endif /* InternetAddress_h */

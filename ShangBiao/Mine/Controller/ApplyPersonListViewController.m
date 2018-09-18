@@ -9,14 +9,17 @@
 #import "ApplyPersonListViewController.h"
 #import "ApplyPersonListTableViewCell.h"
 #import "NewApplyPersonViewController.h"
-@interface ApplyPersonListViewController ()
+@interface ApplyPersonListViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
 @property (nonatomic, strong) NSMutableArray *listArray;
 - (IBAction)clickAddNewContactButtonDone:(id)sender;
 @end
 
 @implementation ApplyPersonListViewController
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self sendGetRequestForListInfo];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"申请列表";
@@ -25,13 +28,16 @@
 }
 - (void)configTableView {
     self.listTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.listTableView.rowHeight = 100;
+    self.listTableView.rowHeight = 50;
     [self.listTableView registerNib:[UINib nibWithNibName:CSCellName(ApplyPersonListTableViewCell) bundle:nil] forCellReuseIdentifier:CSCellName(ApplyPersonListTableViewCell)];
 }
 - (void)sendGetRequestForListInfo {
-    [CSNetworkingManager sendGetRequestWithUrl:CSApplyPersonListURL parameters:nil success:^(id responseObject) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    
+    
+    [CSNetworkingManager sendGetRequestWithUrl:CSApplyPersonListURL parameters:parameters success:^(id responseObject) {
         if (CSInternetRequestSuccessful) {
-            self.listArray = [CSParseManager getMySendOutListModelArray:CSGetResult];
+            self.listArray = [CSParseManager getApplyPersonListModelArray:CSGetResult];
             [self.listTableView reloadData];
         } else {
             CSShowWrongMessage
@@ -50,6 +56,18 @@
     ApplyPersonListModel *model = self.listArray[indexPath.row];
     cell.model = model;
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.fromRegister) {
+       ApplyPersonListModel *model = self.listArray[indexPath.row];
+            if(self.onGetResult)
+            {
+                self.onGetResult(model.personId,model.templatename);
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+        
+       
+    }
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [UIView new];
@@ -93,4 +111,5 @@
     NewApplyPersonViewController *new = [NewApplyPersonViewController new];
     [self.navigationController pushViewController:new animated:YES];
 }
+
 @end

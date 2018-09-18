@@ -9,5 +9,6 @@
 #import "CSBaseViewController.h"
 
 @interface ApplyPersonListViewController : CSBaseViewController
-
+@property(nonatomic,copy) void(^onGetResult)(NSString *memberId,NSString *memberName);
+@property (nonatomic, assign) BOOL fromRegister;
 @end

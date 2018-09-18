@@ -27,7 +27,10 @@
     [self.listTableView registerNib:[UINib nibWithNibName:CSCellName(MySendOutBrandTableViewCell) bundle:nil] forCellReuseIdentifier:CSCellName(MySendOutBrandTableViewCell)];
 }
 - (void)sendGetRequestForListInfo {
-    [CSNetworkingManager sendGetRequestWithUrl:CSMySendOutListURL parameters:nil success:^(id responseObject) {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    
+    
+    [CSNetworkingManager sendGetRequestWithUrl:CSMySendOutListURL parameters:parameters success:^(id responseObject) {
         if (CSInternetRequestSuccessful) {
             self.listArray = [CSParseManager getMySendOutListModelArray:CSGetResult];
             [self.listTableView reloadData];
@@ -37,6 +40,7 @@
     } failure:^(NSError *error) {
         CSInternetFailure
     }];
+    
 }
 #pragma mark -- UITableViewDelegate/DataSource
 

@@ -26,6 +26,17 @@
 		234C30B6213D180900C13551 /* CSParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C30B5213D180900C13551 /* CSParseManager.m */; };
 		234C30BA213D1D6E00C13551 /* HomePageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C30B8213D1D6E00C13551 /* HomePageTableViewCell.m */; };
 		234C30BB213D1D6E00C13551 /* HomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234C30B9213D1D6E00C13551 /* HomePageTableViewCell.xib */; };
+		2367024D21509883006C512E /* NewApplyPersonButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2367024B21509883006C512E /* NewApplyPersonButtonTableViewCell.m */; };
+		2367024E21509883006C512E /* NewApplyPersonButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2367024C21509883006C512E /* NewApplyPersonButtonTableViewCell.xib */; };
+		236702522150992E006C512E /* NewApplyPersonImageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 236702502150992E006C512E /* NewApplyPersonImageViewTableViewCell.m */; };
+		236702532150992E006C512E /* NewApplyPersonImageViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236702512150992E006C512E /* NewApplyPersonImageViewTableViewCell.xib */; };
+		2367025721509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2367025521509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.m */; };
+		2367025821509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2367025621509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.xib */; };
+		2367025B21509ACA006C512E /* NewApplyPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2367025A21509ACA006C512E /* NewApplyPersonModel.m */; };
+		236702672150C7E8006C512E /* CZHAddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2367025F2150C7E8006C512E /* CZHAddressPickerView.m */; };
+		236702682150C7E8006C512E /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 236702642150C7E8006C512E /* city.plist */; };
+		236702692150C7E8006C512E /* UIView+CZHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 236702652150C7E8006C512E /* UIView+CZHExtension.m */; };
+		2367026A2150C7E8006C512E /* UIButton+CZHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 236702662150C7E8006C512E /* UIButton+CZHExtension.m */; };
 		236C0D12214B973400FE58D4 /* RegisterFirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D10214B973400FE58D4 /* RegisterFirstStepViewController.m */; };
 		236C0D13214B973400FE58D4 /* RegisterFirstStepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236C0D11214B973400FE58D4 /* RegisterFirstStepViewController.xib */; };
 		236C0D1F214BA8E900FE58D4 /* SelectPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C0D1E214BA8E900FE58D4 /* SelectPhotoManager.m */; };
@@ -131,6 +142,25 @@
 		234C30B7213D1D6E00C13551 /* HomePageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageTableViewCell.h; sourceTree = "<group>"; };
 		234C30B8213D1D6E00C13551 /* HomePageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageTableViewCell.m; sourceTree = "<group>"; };
 		234C30B9213D1D6E00C13551 /* HomePageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageTableViewCell.xib; sourceTree = "<group>"; };
+		2367024A21509883006C512E /* NewApplyPersonButtonTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewApplyPersonButtonTableViewCell.h; sourceTree = "<group>"; };
+		2367024B21509883006C512E /* NewApplyPersonButtonTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewApplyPersonButtonTableViewCell.m; sourceTree = "<group>"; };
+		2367024C21509883006C512E /* NewApplyPersonButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewApplyPersonButtonTableViewCell.xib; sourceTree = "<group>"; };
+		2367024F2150992E006C512E /* NewApplyPersonImageViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewApplyPersonImageViewTableViewCell.h; sourceTree = "<group>"; };
+		236702502150992E006C512E /* NewApplyPersonImageViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewApplyPersonImageViewTableViewCell.m; sourceTree = "<group>"; };
+		236702512150992E006C512E /* NewApplyPersonImageViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewApplyPersonImageViewTableViewCell.xib; sourceTree = "<group>"; };
+		2367025421509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewApplyPersonTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		2367025521509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewApplyPersonTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		2367025621509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewApplyPersonTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		2367025921509ACA006C512E /* NewApplyPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewApplyPersonModel.h; sourceTree = "<group>"; };
+		2367025A21509ACA006C512E /* NewApplyPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewApplyPersonModel.m; sourceTree = "<group>"; };
+		2367025F2150C7E8006C512E /* CZHAddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZHAddressPickerView.m; sourceTree = "<group>"; };
+		236702602150C7E8006C512E /* AddressPickerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPickerHeader.h; sourceTree = "<group>"; };
+		236702612150C7E8006C512E /* UIView+CZHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CZHExtension.h"; sourceTree = "<group>"; };
+		236702622150C7E8006C512E /* UIButton+CZHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZHExtension.h"; sourceTree = "<group>"; };
+		236702632150C7E8006C512E /* CZHAddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZHAddressPickerView.h; sourceTree = "<group>"; };
+		236702642150C7E8006C512E /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		236702652150C7E8006C512E /* UIView+CZHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZHExtension.m"; sourceTree = "<group>"; };
+		236702662150C7E8006C512E /* UIButton+CZHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZHExtension.m"; sourceTree = "<group>"; };
 		236C0D0F214B973400FE58D4 /* RegisterFirstStepViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterFirstStepViewController.h; sourceTree = "<group>"; };
 		236C0D10214B973400FE58D4 /* RegisterFirstStepViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterFirstStepViewController.m; sourceTree = "<group>"; };
 		236C0D11214B973400FE58D4 /* RegisterFirstStepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterFirstStepViewController.xib; sourceTree = "<group>"; };
@@ -304,6 +334,7 @@
 		2334AC802122730C00694ED7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2367025E2150C7E8006C512E /* AddressPickerView */,
 				236C0D1D214BA8C900FE58D4 /* SelectPhotoManager.h */,
 				236C0D1E214BA8E900FE58D4 /* SelectPhotoManager.m */,
 				23C8F963213E5D22001A1B7F /* UIView+CSSExtension.h */,
@@ -572,6 +603,8 @@
 				236C0D74214FDCB600FE58D4 /* MySendOutListModel.m */,
 				236C0D7B214FE40C00FE58D4 /* ApplyPersonListModel.h */,
 				236C0D7C214FE40C00FE58D4 /* ApplyPersonListModel.m */,
+				2367025921509ACA006C512E /* NewApplyPersonModel.h */,
+				2367025A21509ACA006C512E /* NewApplyPersonModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -591,8 +624,32 @@
 				236C0D7E214FE48600FE58D4 /* ApplyPersonListTableViewCell.h */,
 				236C0D7F214FE48600FE58D4 /* ApplyPersonListTableViewCell.m */,
 				236C0D80214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib */,
+				2367024A21509883006C512E /* NewApplyPersonButtonTableViewCell.h */,
+				2367024B21509883006C512E /* NewApplyPersonButtonTableViewCell.m */,
+				2367024C21509883006C512E /* NewApplyPersonButtonTableViewCell.xib */,
+				2367024F2150992E006C512E /* NewApplyPersonImageViewTableViewCell.h */,
+				236702502150992E006C512E /* NewApplyPersonImageViewTableViewCell.m */,
+				236702512150992E006C512E /* NewApplyPersonImageViewTableViewCell.xib */,
+				2367025421509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.h */,
+				2367025521509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.m */,
+				2367025621509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2367025E2150C7E8006C512E /* AddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2367025F2150C7E8006C512E /* CZHAddressPickerView.m */,
+				236702602150C7E8006C512E /* AddressPickerHeader.h */,
+				236702612150C7E8006C512E /* UIView+CZHExtension.h */,
+				236702622150C7E8006C512E /* UIButton+CZHExtension.h */,
+				236702632150C7E8006C512E /* CZHAddressPickerView.h */,
+				236702642150C7E8006C512E /* city.plist */,
+				236702652150C7E8006C512E /* UIView+CZHExtension.m */,
+				236702662150C7E8006C512E /* UIButton+CZHExtension.m */,
+			);
+			path = AddressPickerView;
 			sourceTree = "<group>";
 		};
 		23F2A5012122A2A0004AC881 /* NetWorkingManage */ = {
@@ -741,6 +798,7 @@
 				234C3087213CD36700C13551 /* RegisterViewController.xib in Resources */,
 				236C0D38214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib in Resources */,
 				236C0D6D214FDB4000FE58D4 /* ApplyPersonListViewController.xib in Resources */,
+				2367025821509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.xib in Resources */,
 				23F2A52B2122AB64004AC881 /* LoginInViewController.xib in Resources */,
 				236C0D5E214FCEC700FE58D4 /* SendOutBrandTableViewCell.xib in Resources */,
 				23C8F957213D36E4001A1B7F /* HotProductTableViewCell.xib in Resources */,
@@ -754,11 +812,14 @@
 				2334AC702122712E00694ED7 /* Main.storyboard in Resources */,
 				2387E37B21424FB100A9C76C /* SendOutDataTableViewCell.xib in Resources */,
 				236C0D47214F9EE000FE58D4 /* MineTableViewCell.xib in Resources */,
+				236702682150C7E8006C512E /* city.plist in Resources */,
 				236C0D59214FC8EB00FE58D4 /* SendOutBrandViewController.xib in Resources */,
 				234C30BB213D1D6E00C13551 /* HomePageTableViewCell.xib in Resources */,
 				2342C51D214106B8003B682A /* SendOutTableViewCell.xib in Resources */,
+				236702532150992E006C512E /* NewApplyPersonImageViewTableViewCell.xib in Resources */,
 				236C0D82214FE48600FE58D4 /* ApplyPersonListTableViewCell.xib in Resources */,
 				236C0D2E214BB6C100FE58D4 /* RegisterFirstStepButtonTableViewCell.xib in Resources */,
+				2367024E21509883006C512E /* NewApplyPersonButtonTableViewCell.xib in Resources */,
 				236C0D13214B973400FE58D4 /* RegisterFirstStepViewController.xib in Resources */,
 				23C56E45213F7559008D519D /* AllClassCollectionViewCell.xib in Resources */,
 				236C0D7A214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.xib in Resources */,
@@ -834,6 +895,7 @@
 				2387E37A21424FB100A9C76C /* SendOutDataTableViewCell.m in Sources */,
 				23F2A5092122A2A0004AC881 /* CSNetworkingManager.m in Sources */,
 				2342C52021410C94003B682A /* SendOutModel.m in Sources */,
+				236702522150992E006C512E /* NewApplyPersonImageViewTableViewCell.m in Sources */,
 				236C0D79214FDF3C00FE58D4 /* MySendoutRegisterTableViewCell.m in Sources */,
 				234C30A3213CE7C900C13551 /* MakeDealViewController.m in Sources */,
 				23C8F960213E2B3F001A1B7F /* ProductDetailViewController.m in Sources */,
@@ -849,21 +911,27 @@
 				234C30AC213CE7EC00C13551 /* MineViewController.m in Sources */,
 				23C56E44213F7559008D519D /* AllClassCollectionViewCell.m in Sources */,
 				236C0D23214BAA5E00FE58D4 /* RegisterFirstStepImageTableViewCell.m in Sources */,
+				236702672150C7E8006C512E /* CZHAddressPickerView.m in Sources */,
+				236702692150C7E8006C512E /* UIView+CZHExtension.m in Sources */,
 				234C30B1213D13DF00C13551 /* HomePageModel.m in Sources */,
 				236C0D86214FE9A700FE58D4 /* NewApplyPersonViewController.m in Sources */,
 				236C0D58214FC8EB00FE58D4 /* SendOutBrandViewController.m in Sources */,
 				23F2A50E2122A38B004AC881 /* CSUtility.m in Sources */,
+				2367026A2150C7E8006C512E /* UIButton+CZHExtension.m in Sources */,
 				236C0D3C214BD4AE00FE58D4 /* RegisterSecondStepViewController.m in Sources */,
 				236C0D5D214FCEC700FE58D4 /* SendOutBrandTableViewCell.m in Sources */,
 				23C8F964213E5D22001A1B7F /* UIView+CSSExtension.m in Sources */,
 				23C8F95B213D47DA001A1B7F /* HomePageBrandTableViewCell.m in Sources */,
+				2367025721509A3C006C512E /* NewApplyPersonTextFieldTableViewCell.m in Sources */,
 				2334AC6A2122712E00694ED7 /* AppDelegate.m in Sources */,
 				236C0D4A214FA72700FE58D4 /* TwoKindsSendOutViewController.m in Sources */,
 				236C0D37214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.m in Sources */,
+				2367024D21509883006C512E /* NewApplyPersonButtonTableViewCell.m in Sources */,
 				236C0D28214BB2B000FE58D4 /* RegisterFirstStepExplainTableViewCell.m in Sources */,
 				236C0D75214FDCB600FE58D4 /* MySendOutListModel.m in Sources */,
 				2342C51C214106B8003B682A /* SendOutTableViewCell.m in Sources */,
 				236C0D81214FE48600FE58D4 /* ApplyPersonListTableViewCell.m in Sources */,
+				2367025B21509ACA006C512E /* NewApplyPersonModel.m in Sources */,
 				234C30B6213D180900C13551 /* CSParseManager.m in Sources */,
 				236C0D8A214FEE3800FE58D4 /* CSImagePickerViewController.m in Sources */,
 				23C56E4B213FAB4A008D519D /* SystemSearchViewController.m in Sources */,
