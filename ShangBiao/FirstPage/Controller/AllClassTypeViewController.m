@@ -8,7 +8,7 @@
 
 #import "AllClassTypeViewController.h"
 #import "AllClassCollectionViewCell.h"
-#import "SearchResultViewController.h"
+#import "MakeDealViewController.h"
 @interface AllClassTypeViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *allClassCollectionView;
 
@@ -53,7 +53,9 @@
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    SearchResultViewController *new = [SearchResultViewController new];
+    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    MakeDealViewController *new= [sb instantiateViewControllerWithIdentifier:CSCellName(MakeDealViewController)];
     new.recordClassId =  [NSString stringWithFormat:@"%d",(int)indexPath.row + 1];
     [self.navigationController pushViewController:new animated:YES];
 }

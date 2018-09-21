@@ -16,6 +16,8 @@
 
 - (IBAction)clickLoginButtonDone:(id)sender;
 - (IBAction)clickRegisterButtonDone:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *loginButton;
+- (IBAction)clickForgetButtonDone:(id)sender;
 
 @end
 
@@ -24,7 +26,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登录";
+    [self changeButtonStatus];
+   
     [self configNavigationBar];
+}
+- (void)changeButtonStatus {
+    CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
+    gradientLayer.frame = CGRectMake(0, 0, MainScreenWidth - 15 * 2, 45);
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1, 0);
+    //    gradientLayer.locations = @[@(0.5),@(1.0)];//渐变点
+    [gradientLayer setColors:@[(id)[[UIColor colorWithHexString:@"FDA128"] CGColor],(id)[[UIColor colorWithHexString:@"FC491E"] CGColor]]];//渐变数组
+    
+    [self.loginButton.layer insertSublayer:gradientLayer atIndex:0];
+    self.loginButton.layer.cornerRadius = 5;
+    self.loginButton.layer.masksToBounds = YES;
 }
 - (void)configNavigationBar {
     
@@ -79,6 +95,12 @@
 
 - (IBAction)clickRegisterButtonDone:(id)sender {
     RegisterViewController *new = [RegisterViewController new];
+    new.passString = @"注册";
+    [self.navigationController pushViewController:new animated:YES];
+}
+- (IBAction)clickForgetButtonDone:(id)sender {
+    RegisterViewController *new = [RegisterViewController new];
+    new.passString = @"忘记密码";
     [self.navigationController pushViewController:new animated:YES];
 }
 @end

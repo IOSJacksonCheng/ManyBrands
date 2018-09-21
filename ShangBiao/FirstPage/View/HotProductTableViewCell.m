@@ -7,7 +7,7 @@
 //
 
 #import "HotProductTableViewCell.h"
-#import "SearchResultViewController.h"
+#import "MakeDealViewController.h"
 @interface HotProductTableViewCell()
 @property (weak, nonatomic) IBOutlet UIView *cultureView;
 @property (weak, nonatomic) IBOutlet UIView *shoushiView;
@@ -71,7 +71,9 @@
     [self handleClickViewWithClassId: [NSString stringWithFormat:@"%ld",(long)view.tag]];
 }
 - (void)handleClickViewWithClassId:(NSString *)goodsId {
-    SearchResultViewController *new = [SearchResultViewController new];
+    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    MakeDealViewController *new= [sb instantiateViewControllerWithIdentifier:CSCellName(MakeDealViewController)];
     
     new.recordClassId = goodsId;
     

@@ -40,5 +40,8 @@ typedef void(^GpsBlock)(NSString * lon, NSString * lat);
 
 + (void)showLoginViewController;
 +(void) saveImage:(UIImage *)currentImage withName:(NSString *)imageName;
+//+ (NSDictionary *)readLocalJasonFile;
++ (NSMutableArray *)readLocalSuperClassIdJasonFile;
++ (NSMutableArray *)readLocalCategoryJasonFile;
 @end
 

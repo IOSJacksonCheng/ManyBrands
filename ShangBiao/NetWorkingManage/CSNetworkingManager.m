@@ -33,6 +33,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
    
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
+    CSLog(@"token：%@",CSGetToken);
     CSLog(@"%@",url);
     CSLog(@"当前调用函数：%s",__func__);
     CSLog(@"get参数:%@",paramDic);
@@ -72,7 +73,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
     
-
+CSLog(@"token：%@",CSGetToken);
     CSLog(@"%@",url);
     CSLog(@"当前调用函数：%s",__func__);
     CSLog(@"POST参数:%@",paramDic);
@@ -105,7 +106,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
     
-
+CSLog(@"token：%@",CSGetToken);
     CSLog(@"%@",url);
     CSLog(@"当前调用函数：%s",__func__);
     CSLog(@"PUT参数:%@",paramDic);
@@ -138,6 +139,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
 
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
     CSLog(@"%@",url);
+    CSLog(@"token：%@",CSGetToken);
     CSLog(@"当前调用函数：%s",__func__);
     CSLog(@"DELETE参数:%@",paramDic);
     [manager DELETE:url parameters:paramDic success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -170,6 +172,7 @@ NSString * const TokenRefreshFailureRemindMessage = @"网络错误,请检查网�
     
     NSString *url = [NSString stringWithFormat:@"%@/%@",[self getBaseUrl],urlStr];
     CSLog(@"上传图片地址:%@",url);
+    CSLog(@"token：%@",CSGetToken);
     [manager POST:url parameters:paramDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         

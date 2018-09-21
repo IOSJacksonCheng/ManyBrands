@@ -14,7 +14,7 @@
 #import "LoginInViewController.h"
 #import "CSCommonTabBarController.h"
 
-#define LOAD_LABEL                     NSLocalizedString(@"发生未知错误，请稍后再试",)
+#define LOAD_LABEL                     NSLocalizedString(@"登录过期，请重新登录",)
 @implementation CSUtility
 {
     MBProgressHUD *_mbProgressHUD;
@@ -393,6 +393,49 @@
         [[NSFileManager defaultManager] createDirectoryAtPath:imageDocPath withIntermediateDirectories:NO attributes:nil error:nil];
     }
     [imageData writeToFile:[imageDocPath stringByAppendingPathComponent:imageName] atomically:NO];
+}
+
++ (NSMutableArray *)readLocalSuperClassIdJasonFile {
+    // 获取文件路径
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"superClassId" ofType:@"json"];
+    // 将文件数据化
+    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        CSLog(@"路径对的");
+    }
+    NSError *error = nil;
+    NSString *iso = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
+    NSData *dutf8 = [iso dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableArray *dataArray = [NSJSONSerialization JSONObjectWithData:dutf8 options:NSJSONReadingMutableContainers error:&error];
+    if (!error) {
+           CSLog(@"解析错误:%@", error.userInfo);
+    }
+ 
+    CSLog(@"%@", dataArray);
+    
+    return dataArray;
+
+   
+}
++ (NSMutableArray *)readLocalCategoryJasonFile {
+    // 获取文件路径
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"category" ofType:@"json"];
+    // 将文件数据化
+    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        CSLog(@"路径对的");
+    }
+    NSError *error = nil;
+    NSString *iso = [[NSString alloc] initWithData:data encoding:NSISOLatin1StringEncoding];
+    NSData *dutf8 = [iso dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableArray *dataArray = [NSJSONSerialization JSONObjectWithData:dutf8 options:NSJSONReadingMutableContainers error:&error];
+    if (!error) {
+        CSLog(@"解析错误:%@", error.userInfo);
+    }
+    
+    CSLog(@"%@", dataArray);
+    
+    return dataArray;
 }
 @end
 

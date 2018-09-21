@@ -23,9 +23,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = self.passString;
+    [self changeButtonStatus];
 }
-
+- (void)changeButtonStatus {
+    CAGradientLayer *gradientLayer =  [CAGradientLayer layer];
+    gradientLayer.frame = CGRectMake(0, 0, 150, 40);
+    gradientLayer.startPoint = CGPointMake(0, 0);
+    gradientLayer.endPoint = CGPointMake(1, 0);
+    //    gradientLayer.locations = @[@(0.5),@(1.0)];//渐变点
+    [gradientLayer setColors:@[(id)[[UIColor colorWithHexString:@"FDA128"] CGColor],(id)[[UIColor colorWithHexString:@"FC491E"] CGColor]]];//渐变数组
+    
+    [self.sendSecurityButton.layer insertSublayer:gradientLayer atIndex:0];
+    self.sendSecurityButton.layer.cornerRadius = 5;
+    self.sendSecurityButton.layer.masksToBounds = YES;
+}
 //发送验证码显示按钮时间
 - (void)startTime {
     __block int timeout = 60;
@@ -108,10 +120,21 @@
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"username"] = phone;
     parameters[@"password"] = code;
-    parameters[@"password2"] = againCode; parameters[@"mobile_code"] = security;;
-    [CSNetworkingManager sendPostRequestWithUrl:CSRegisterURL Parpmeters:parameters success:^(id responseObject) {
+    parameters[@"password2"] = againCode; parameters[@"mobile_code"] = security;
+    NSString *url = nil;
+    if ([self.passString isEqualToString:@"注册"]) {
+        url = CSRegisterURL;
+    } else {
+        url = CSForgetCodeAndChangeCodeURL;
+    }
+    [CSNetworkingManager sendPostRequestWithUrl:url Parpmeters:parameters success:^(id responseObject) {
         if (CSInternetRequestSuccessful) {
-            CustomWrongMessage(@"注册成功")
+            if ([self.passString isEqualToString:@"注册"]) {
+                CustomWrongMessage(@"注册成功");
+            }else {
+                CustomWrongMessage(@"修改密码成功");
+            }
+            
         } else {
             CSShowWrongMessage
         }

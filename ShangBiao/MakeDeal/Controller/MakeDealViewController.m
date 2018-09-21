@@ -9,6 +9,7 @@
 
 #import "MakeDealViewController.h"
 #import "HomePageBrandTableViewCell.h"
+#import "AllClassTypeViewController.h"
 @interface MakeDealViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *makeDealTableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -16,7 +17,7 @@
 @property (nonatomic, strong) NSString *recordCheckType;
 @property (nonatomic, strong) NSString *recordOrder;
 @property (nonatomic, strong) NSString *recordType;
-@property (nonatomic, strong) NSString *recordKeyword;
+
 
 @property (nonatomic, assign) int page;
 
@@ -40,12 +41,14 @@
     self.title = @"交易";
     self.recordCheckType = @"price";
     self.recordOrder = @"2";
-    
+    [self configSubViews];
     [self clickPriceButton];
     [self configTableView];
     [self sendGetRequestForNewInfomation];
 }
-
+- (void)configSubViews {
+    self.keywordTextfield.text = self.recordKeyword;
+}
 - (void)sendGetRequestForNewInfomation {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     self.page = 1;
@@ -53,6 +56,7 @@
     parameters[@"keyword"] = self.keywordTextfield.text;
     parameters[@"type"] = self.recordType;
     parameters[@"p"] =  [NSString stringWithFormat:@"%d",self.page];
+    parameters[@"cat_id"] = self.recordClassId;
     //leibie
     parameters[@"o"] = self.recordCheckType;
     //paixu
@@ -159,41 +163,42 @@
     if (sender.tag == 0) {
         //0 typeButton
         
-        
+        AllClassTypeViewController *new = [AllClassTypeViewController new];
+        [self.navigationController pushViewController:new animated:YES];
             //0商标名  1注册号  2 持有人
             //1.创建AlertController
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-            
-            NSArray *messageArray = @[@"商标名", @"注册号", @"持有人"];
-            
-            for (int i = 0; i < messageArray.count; i++) {
-                
-                UIAlertAction *action = [UIAlertAction actionWithTitle:messageArray[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                        [self.typeButton setTitle:messageArray[i] forState:UIControlStateNormal];
-                       
-                        self.recordType =  [NSString stringWithFormat:@"%d",i];
-                    });
-                    
-                }];
-                
-                [alert addAction:action];
-                
-            }
-            
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                
-                
-                
-            }];
-            //3.将按钮添加到AlertController中
-            
-            [alert addAction:cancelAction];
-            
-            //5.显示AlertController
-            [[CSUtility getCurrentViewController] presentViewController:alert animated:YES completion:nil];
+//            UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//
+//            NSArray *messageArray = @[@"商标名", @"注册号", @"持有人"];
+//
+//            for (int i = 0; i < messageArray.count; i++) {
+//
+//                UIAlertAction *action = [UIAlertAction actionWithTitle:messageArray[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//
+//                        [self.typeButton setTitle:messageArray[i] forState:UIControlStateNormal];
+//
+//                        self.recordType =  [NSString stringWithFormat:@"%d",i];
+//                    });
+//
+//                }];
+//
+//                [alert addAction:action];
+//
+//            }
+//
+//            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//
+//
+//            }];
+//            //3.将按钮添加到AlertController中
+//
+//            [alert addAction:cancelAction];
+//
+//            //5.显示AlertController
+//            [[CSUtility getCurrentViewController] presentViewController:alert animated:YES completion:nil];
         
         
         

@@ -7,7 +7,7 @@
 //
 
 #import "HomePageTableViewCell.h"
-#import "SearchResultViewController.h"
+#import "MakeDealViewController.h"
 #import "SystemSearchViewController.h"
 @interface HomePageTableViewCell()
 
@@ -116,9 +116,12 @@
 
 - (IBAction)clickSearchButtonDone:(UIButton *)sender {
     
-    SearchResultViewController *new = [SearchResultViewController new];
-    new.recordKeyWord = self.keyWrodTextField.text;
-    new.recordType = self.recordType;
+    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    MakeDealViewController *new= [sb instantiateViewControllerWithIdentifier:CSCellName(MakeDealViewController)];
+   
+    new.recordKeyword = self.keyWrodTextField.text;
+    
     [[CSUtility getCurrentViewController].navigationController pushViewController:new animated:YES];
 }
 @end

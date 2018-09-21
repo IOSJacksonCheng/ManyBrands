@@ -11,6 +11,7 @@
 #import "MySendOutBrandViewController.h"
 #import "MyRegisterBrandViewController.h"
 #import "ApplyPersonListViewController.h"
+#import "RegisterViewController.h"
 @interface MineViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -69,15 +70,29 @@
     return 1;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CSCellName(MineTableViewCell) forIndexPath:indexPath];
-    
+   
+    if (indexPath.row == 0) {
+         MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CSCellName(MineTableViewCell) forIndexPath:indexPath];
+        cell.titleLabel.text = @"申请人列表";
+        cell.titleImageView.image = DotaImageName(@"tongxunlu-1");
+        return cell;
+    }
+      MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CSCellName(MineTableViewCell) forIndexPath:indexPath];
+        cell.titleLabel.text = @"修改密码";
+        cell.titleImageView.image = DotaImageName(@"changeCode");
     return cell;
+    
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
- 
+    if (indexPath.row == 1) {
+        RegisterViewController *new = [RegisterViewController new];
+        new.passString = @"修改密码";
+        [self.navigationController pushViewController:new animated:YES];
+        return;
+    }
     ApplyPersonListViewController *new = [ApplyPersonListViewController new];
     [self.navigationController pushViewController:new animated:YES];
 }

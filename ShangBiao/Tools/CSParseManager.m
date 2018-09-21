@@ -12,7 +12,88 @@
 #import "SendOutModel.h"
 #import "MySendOutListModel.h"
 #import "ApplyPersonListModel.h"
+#import "SuperClassIdModel.h"
+#import "CategoryClassIdModel.h"
 @implementation CSParseManager
++ (NSMutableArray *)getCategoryClassIdListModelArray:(id)responseObject {
+    if (![responseObject isKindOfClass:[NSArray class]]) {
+        CSLog(@"\n%s数据错误\n",__func__);
+        return nil;
+    }
+    NSArray *array = responseObject;
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (int i = 0 ; i < array.count ; i ++) {
+        
+        CategoryClassIdModel *model = [CategoryClassIdModel new];
+        model.classId = [self handelInternetString:array[i][@"id"]];
+        model.item = [self getCategorySonClassIdListModelArray:array[i][@"item"]];
+        model.chooseStatus = NO;
+        [mutableArray addObject:model];
+    }
+    
+    return mutableArray;
+}
++ (NSMutableArray *)getCategorySonClassIdListModelArray:(id)responseObject {
+    if (![responseObject isKindOfClass:[NSArray class]]) {
+        CSLog(@"\n%s数据错误\n",__func__);
+        return nil;
+    }
+    NSArray *array = responseObject;
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (int i = 0 ; i < array.count ; i ++) {
+        
+        CategoryClassIdModel *model = [CategoryClassIdModel new];
+        model.classId = [self handelInternetString:array[i][@"id"]];
+         model.title = [self handelInternetString:array[i][@"title"]];
+        model.item = [self getCategoryGrandsonClassIdListModelArray:array[i][@"item"]];
+          model.chooseStatus = NO;
+        [mutableArray addObject:model];
+    }
+    
+    return mutableArray;
+}
++ (NSMutableArray *)getCategoryGrandsonClassIdListModelArray:(id)responseObject {
+    if (![responseObject isKindOfClass:[NSArray class]]) {
+        CSLog(@"\n%s数据错误\n",__func__);
+        return nil;
+    }
+    NSArray *array = responseObject;
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (int i = 0 ; i < array.count ; i ++) {
+        
+        CategoryClassIdModel *model = [CategoryClassIdModel new];
+        model.classId = [self handelInternetString:array[i][@"id"]];
+        model.title = [self handelInternetString:array[i][@"title"]];
+        model.chooseStatus = NO;
+        [mutableArray addObject:model];
+    }
+    
+    return mutableArray;
+}
++ (NSMutableArray *)getSuperClassListModelArray:(id)responseObject {
+    if (![responseObject isKindOfClass:[NSArray class]]) {
+        CSLog(@"\n%s数据错误\n",__func__);
+        return nil;
+    }
+    NSArray *array = responseObject;
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (int i = 0 ; i < array.count ; i ++) {
+        
+        SuperClassIdModel *model = [SuperClassIdModel new];
+        model.classId = [self handelInternetString:array[i][@"id"]];
+        if (i == 0) {
+            model.chooseStatus = YES;
+        } else {
+               model.chooseStatus = NO;
+        }
+     
+        model.title = [self handelInternetString:array[i][@"title"]];
+        
+        [mutableArray addObject:model];
+    }
+    
+    return mutableArray;
+}
 + (NSMutableArray *)getApplyPersonListModelArray:(id)responseObject {
     if (![responseObject isKindOfClass:[NSArray class]]) {
         CSLog(@"\n%s数据错误\n",__func__);

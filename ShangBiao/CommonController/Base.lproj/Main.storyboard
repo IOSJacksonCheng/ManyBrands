@@ -135,17 +135,20 @@
                                 <rect key="frame" x="15" y="74" width="345" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-Fy-rDK">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="SGm-7p-e7U"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title=" 商标名" image="more">
+                                        <state key="normal" image="fenlei">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="clickTopViewButtonDone:" destination="baZ-bJ-7Sq" eventType="touchUpInside" id="7n6-Ib-qhc"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入关键字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8M-FR-AQX">
-                                        <rect key="frame" x="105" y="0.0" width="180" height="45"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入商标名称、注册号、持有人" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8M-FR-AQX">
+                                        <rect key="frame" x="65" y="0.0" width="220" height="45"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -166,11 +169,10 @@
                                 <constraints>
                                     <constraint firstItem="s8M-FR-AQX" firstAttribute="top" secondItem="0KP-ey-EDt" secondAttribute="top" id="2yA-SA-k5U"/>
                                     <constraint firstAttribute="bottom" secondItem="uGV-F3-m7I" secondAttribute="bottom" id="4dN-me-hai"/>
-                                    <constraint firstItem="s8M-FR-AQX" firstAttribute="leading" secondItem="c7c-Fy-rDK" secondAttribute="trailing" constant="5" id="H65-pa-W1V"/>
                                     <constraint firstAttribute="trailing" secondItem="s8M-FR-AQX" secondAttribute="trailing" constant="60" id="TXz-tu-A6d"/>
                                     <constraint firstAttribute="trailing" secondItem="uGV-F3-m7I" secondAttribute="trailing" id="YBz-oA-MWR"/>
                                     <constraint firstItem="c7c-Fy-rDK" firstAttribute="top" secondItem="0KP-ey-EDt" secondAttribute="top" id="YFy-3O-AA9"/>
-                                    <constraint firstItem="s8M-FR-AQX" firstAttribute="leading" secondItem="0KP-ey-EDt" secondAttribute="leading" constant="105" id="e6Z-6W-Mu9"/>
+                                    <constraint firstItem="s8M-FR-AQX" firstAttribute="leading" secondItem="0KP-ey-EDt" secondAttribute="leading" constant="65" id="e6Z-6W-Mu9"/>
                                     <constraint firstAttribute="bottom" secondItem="c7c-Fy-rDK" secondAttribute="bottom" id="eq2-rv-Ekf"/>
                                     <constraint firstItem="uGV-F3-m7I" firstAttribute="leading" secondItem="s8M-FR-AQX" secondAttribute="trailing" id="gLp-JK-azT"/>
                                     <constraint firstAttribute="bottom" secondItem="s8M-FR-AQX" secondAttribute="bottom" id="gZ8-BQ-aGL"/>
@@ -624,13 +626,13 @@
     <resources>
         <image name="fabu" width="20" height="20"/>
         <image name="fabu_select" width="20" height="20"/>
+        <image name="fenlei" width="20" height="20"/>
         <image name="head_portrait" width="128" height="128"/>
         <image name="home" width="20" height="20"/>
         <image name="home_select" width="20" height="20"/>
         <image name="jiangxu" width="20" height="20"/>
         <image name="mine" width="20" height="20"/>
         <image name="mine_select" width="20" height="20"/>
-        <image name="more" width="10" height="10"/>
         <image name="search_white" width="20" height="20"/>
         <image name="sendOut" width="60" height="60"/>
         <image name="shengxu" width="20" height="20"/>

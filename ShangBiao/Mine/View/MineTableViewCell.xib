@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tongxunlu" translatesAutoresizingMaskIntoConstraints="NO" id="vde-DY-pqW">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="changeCode" translatesAutoresizingMaskIntoConstraints="NO" id="vde-DY-pqW">
                         <rect key="frame" x="15" y="11" width="20" height="20"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="申请人列表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpK-Ho-79a">
@@ -37,9 +37,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="titleImageView" destination="vde-DY-pqW" id="P4F-g9-cPJ"/>
+                <outlet property="titleLabel" destination="VpK-Ho-79a" id="jFS-a8-pSr"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="tongxunlu" width="20" height="20"/>
+        <image name="changeCode" width="20" height="20"/>
     </resources>
 </document>

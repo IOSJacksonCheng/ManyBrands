@@ -16,4 +16,6 @@
 + (SendOutModel *)getSendOutPreciseModelArray:(id)responseObject;
 + (NSMutableArray *)getMySendOutListModelArray:(id)responseObject;
 + (NSMutableArray *)getApplyPersonListModelArray:(id)responseObject;
++ (NSMutableArray *)getSuperClassListModelArray:(id)responseObject;
++ (NSMutableArray *)getCategoryClassIdListModelArray:(id)responseObject;
 @end

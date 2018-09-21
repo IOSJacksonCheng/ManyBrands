@@ -29,6 +29,8 @@
 #define CSLoginURL @"index.php/api/login"
 /** 注册 */
 #define CSRegisterURL @"index.php/api/user/reg"
+/** 修改密码/忘记密码 */
+#define CSForgetCodeAndChangeCodeURL @"index.php/api/user/set_pwd"
 /** 发送手机验证码 */
 #define CSGetCodeURL @"index.php/api/user/send_sms_reg_code"
 /** 获取首页广告 */
@@ -58,4 +60,11 @@
 #define CSApplyPersonListURL @"index.php/api/register/getproposer"
 /** 添加申请人 */
 #define CSAddNewApplyPersonURL @"index.php/api/register/proposer"
+/** 商标注册 */
+#define CSRegisterBrandURL @"index.php/api/register"
+
+
+/** 修改价格 */
+#define CSChangePriceURL @"index.php/api/user/setprice"
+
 #endif /* InternetAddress_h */

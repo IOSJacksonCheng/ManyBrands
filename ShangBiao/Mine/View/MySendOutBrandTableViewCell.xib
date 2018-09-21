@@ -43,8 +43,21 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改价格" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCO-ma-jYJ">
+                        <rect key="frame" x="235" y="30.5" width="70" height="40"/>
+                        <color key="backgroundColor" red="1" green="0.38823529410000002" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="EEl-MA-WEe"/>
+                            <constraint firstAttribute="width" constant="70" id="iDR-Zz-gA6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="CCO-ma-jYJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2Ez-3b-5fe"/>
+                    <constraint firstAttribute="trailing" secondItem="CCO-ma-jYJ" secondAttribute="trailing" constant="15" id="35K-SG-uY1"/>
                     <constraint firstItem="PjY-Yx-lVT" firstAttribute="leading" secondItem="tJI-0K-bkH" secondAttribute="trailing" constant="5" id="90L-pm-XmB"/>
                     <constraint firstItem="TR8-94-zrG" firstAttribute="top" secondItem="uwM-4t-6Au" secondAttribute="bottom" constant="14" id="9GL-Pk-59u"/>
                     <constraint firstAttribute="bottom" secondItem="PjY-Yx-lVT" secondAttribute="bottom" constant="10" id="A6x-Kt-qKZ"/>
@@ -59,6 +72,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="applyPersonLabel" destination="PjY-Yx-lVT" id="NKl-rT-kzK"/>
+                <outlet property="changePriceLabel" destination="CCO-ma-jYJ" id="Ucj-uO-5x9"/>
                 <outlet property="moneyLabel" destination="TR8-94-zrG" id="Nux-Wf-fuz"/>
                 <outlet property="nameLabel" destination="uwM-4t-6Au" id="Ng1-HH-Nec"/>
                 <outlet property="productImageView" destination="tJI-0K-bkH" id="stT-1C-NRv"/>

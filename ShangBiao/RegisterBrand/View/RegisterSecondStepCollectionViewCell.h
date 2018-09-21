@@ -1,0 +1,15 @@
+//
+//  RegisterSecondStepCollectionViewCell.h
+//  ShangBiao
+//
+//  Created by shoubin cheng on 2018/9/19.
+//  Copyright © 2018年 Jackson cheng. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "CategoryClassIdModel.h"
+@interface RegisterSecondStepCollectionViewCell : UICollectionViewCell
+@property (nonatomic, strong) CategoryClassIdModel *model;
+
+
+@end

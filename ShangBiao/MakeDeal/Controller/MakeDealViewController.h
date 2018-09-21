@@ -9,5 +9,6 @@
 #import "CSBaseViewController.h"
 
 @interface MakeDealViewController : CSBaseViewController
-
+@property (nonatomic, strong) NSString *recordKeyword;
+@property (nonatomic, strong) NSString *recordClassId;
 @end

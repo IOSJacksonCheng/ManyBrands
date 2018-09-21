@@ -253,7 +253,7 @@ NSString * const NumberType = @"1";
         }
         
     }
-    self.brandCountLabel.text = [NSString stringWithFormat:@"共%ld个商标",num];
+    self.brandCountLabel.text = [NSString stringWithFormat:@"共%ld个商标",(long)num];
     
 }
 #pragma -- UITextFieldDelegate
@@ -283,7 +283,7 @@ NSString * const NumberType = @"1";
     if (sender.selected) {
         count = self.listArray.count;
     }
-    self.brandCountLabel.text = [NSString stringWithFormat:@"共%ld个商标",count];
+    self.brandCountLabel.text = [NSString stringWithFormat:@"共%ld个商标",(long)count];
     [self.listTableView reloadData];
 }
 

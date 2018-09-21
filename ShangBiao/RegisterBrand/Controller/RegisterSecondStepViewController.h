@@ -9,5 +9,5 @@
 #import "CSBaseViewController.h"
 
 @interface RegisterSecondStepViewController : CSBaseViewController
-
+@property (nonatomic, strong) NSMutableDictionary *passParameters;
 @end

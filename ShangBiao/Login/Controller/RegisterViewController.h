@@ -9,5 +9,5 @@
 #import "CSBaseViewController.h"
 
 @interface RegisterViewController : CSBaseViewController
-
+@property (nonatomic, strong) NSString *passString;
 @end

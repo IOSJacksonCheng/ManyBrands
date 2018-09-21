@@ -248,13 +248,26 @@
      [self.firstStepTableView reloadData];
 }
 - (IBAction)clickNextStepButtonDone:(id)sender {
-    
+
     if (csCharacterIsBlank(self.recordApplyPerson) || csCharacterIsBlank(self.recordBrandName) || csCharacterIsBlank(self.recordDelegateImageURL) || csCharacterIsBlank(self.recordBlackImageURL) || !self.clickChooseButton) {
      CustomWrongMessage(@"请填写完整信息")
         return;
     }
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"applyerid"] = self.recordApplyPersonId;
+    parameters[@"tm_name"] = self.recordBrandName;
+    parameters[@"fileWtName"] = self.recordDelegateImageURL;
+     parameters[@"tmDesignDeclare"] = self.recordExplainString;
+    if (self.chooseBlackButton) {
+         parameters[@"iscolored"] = @"1";
+         parameters[@"imageShow1"] = self.recordBlackImageURL;
+    } else {
+          parameters[@"imageShow2"] = self.recordBlackImageURL;
+        parameters[@"iscolored"] = @"0";
+    }
     
     RegisterSecondStepViewController *new = [RegisterSecondStepViewController new];
+    new.passParameters = parameters;
     [self.navigationController pushViewController:new animated:YES];
 }
 @end
