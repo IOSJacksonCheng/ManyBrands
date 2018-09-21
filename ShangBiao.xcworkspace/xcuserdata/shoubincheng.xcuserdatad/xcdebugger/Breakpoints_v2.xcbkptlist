@@ -32,16 +32,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShangBiao/Login/Controller/RegisterViewController.m"
+            timestampString = "559223072.878363"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-startTime"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShangBiao/Mine/Controller/NewApplyPersonViewController.m"
-            timestampString = "558973268.37844"
+            filePath = "ShangBiao/Login/Controller/RegisterViewController.m"
+            timestampString = "559223072.878431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "851"
-            endingLineNumber = "851"
-            landmarkName = "-clickSaveButtonDone:"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-doGetCodeWithUserName:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

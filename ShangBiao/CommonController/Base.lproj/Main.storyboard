@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6l-He-A6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6l-He-A6M">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p27-KR-QOe">
-                                <rect key="frame" x="87" y="163.5" width="200" height="140"/>
+                                <rect key="frame" x="87.5" y="163.5" width="200" height="140"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sendOut" translatesAutoresizingMaskIntoConstraints="NO" id="7jC-Xv-xJ3">
                                         <rect key="frame" x="70" y="10" width="60" height="60"/>
@@ -73,7 +72,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wam-e5-aQ2">
-                                <rect key="frame" x="87" y="333.5" width="200" height="140"/>
+                                <rect key="frame" x="87.5" y="333.5" width="200" height="140"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sendOut" translatesAutoresizingMaskIntoConstraints="NO" id="Vrw-99-sfS">
                                         <rect key="frame" x="70" y="10" width="60" height="60"/>
@@ -126,7 +125,7 @@
         <!--Make Deal View Controller-->
         <scene sceneID="5EQ-3G-kIR">
             <objects>
-                <viewController id="baZ-bJ-7Sq" customClass="MakeDealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MakeDealViewController" id="baZ-bJ-7Sq" customClass="MakeDealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khh-Un-5pu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,7 +329,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商标申请须知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bep-SD-IEL">
-                                <rect key="frame" x="139" y="79" width="98" height="19.5"/>
+                                <rect key="frame" x="138.5" y="79" width="98" height="19.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.5" id="92E-Wp-l4P"/>
                                 </constraints>
@@ -386,7 +385,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1835456456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f88-so-Dcd">
-                                        <rect key="frame" x="144.5" y="95" width="85" height="17"/>
+                                        <rect key="frame" x="145" y="95" width="85" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

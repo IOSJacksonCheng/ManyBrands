@@ -10,7 +10,7 @@
 #import "Masonry.h"
 
 #import "MakeDealViewController.h"
-@interface CSTitleSearchView()
+@interface CSTitleSearchView()<UITextFieldDelegate>
 @property (nonatomic, strong) UIButton *brandButton;
 @property (nonatomic, strong) UITextField *keywordTextField;
 @property (nonatomic, strong) NSString *recordType;
@@ -19,7 +19,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = csWhiteColor;
+        self.backgroundColor = csf1f1f1Color;
          self.layer.cornerRadius = 5;
         self.layer.masksToBounds = YES;
 //        self.brandButton = [[UIButton alloc] init];
@@ -50,9 +50,12 @@
         }];
        
         self.keywordTextField = [[UITextField alloc] init];
+        self.keywordTextField.tintColor = csBlackColor;
         [self addSubview:self.keywordTextField];
          self.keywordTextField.backgroundColor = csf1f1f1Color;
         self.keywordTextField.placeholder = @"请输入商标名称、注册号、持有人";
+        self.keywordTextField.returnKeyType = UIReturnKeySearch;
+        self.keywordTextField.delegate = self;
         self.keywordTextField.font = csCharacterFont_14;
         self.keywordTextField.borderStyle = UITextBorderStyleNone;
         [self.keywordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -70,7 +73,7 @@
   
     UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    MakeDealViewController *new= [sb instantiateViewControllerWithIdentifier:CSCellName(MakeDealViewController)];
+    MakeDealViewController *new= [sb instantiateViewControllerWithIdentifier:@"MakeDealViewController"];
     new.recordKeyword = self.keywordTextField.text;
    
     [[CSUtility getCurrentViewController].navigationController pushViewController:new animated:YES];
@@ -109,5 +112,19 @@
     
     //5.显示AlertController
     [[CSUtility getCurrentViewController] presentViewController:alert animated:YES completion:nil];
+}
+
+
+//搜索虚拟键盘响应
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+
+{
+    UIStoryboard *sb= [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    MakeDealViewController *new= [sb instantiateViewControllerWithIdentifier:@"MakeDealViewController"];
+    new.recordKeyword = self.keywordTextField.text;
+    
+    [[CSUtility getCurrentViewController].navigationController pushViewController:new animated:YES];
+    return YES;
 }
 @end
