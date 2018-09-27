@@ -26,6 +26,7 @@
 - (IBAction)clickTopViewButtonDone:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *priceButton;
 @property (weak, nonatomic) IBOutlet UIButton *timeButton;
+@property (weak, nonatomic) IBOutlet UIView *buttonView;
 
 @end
 
@@ -48,6 +49,8 @@
 }
 - (void)configSubViews {
     self.keywordTextfield.text = self.recordKeyword;
+    self.buttonView.layer.cornerRadius = 5;
+    self.buttonView.layer.masksToBounds = YES;
 }
 - (void)sendGetRequestForNewInfomation {
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];

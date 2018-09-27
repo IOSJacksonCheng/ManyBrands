@@ -8,30 +8,97 @@
 
 #import "RegisterBrandViewController.h"
 #import "RegisterFirstStepViewController.h"
-@interface RegisterBrandViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
-- (IBAction)clickRegisterButtonDone:(UIButton *)sender;
+#import <WebKit/WebKit.h>
 
+
+@interface RegisterBrandViewController ()<WKUIDelegate,WKNavigationDelegate>
+
+@property (nonatomic, strong) WKWebView *wkWebView;
+@property (nonatomic, strong) WKWebViewConfiguration *wkConfig;
 @end
 
 @implementation RegisterBrandViewController
 
+- (WKWebViewConfiguration *)wkConfig {
+    if (!_wkConfig) {
+        _wkConfig = [[WKWebViewConfiguration alloc] init];
+        _wkConfig.allowsInlineMediaPlayback = YES;
+        _wkConfig.allowsPictureInPictureMediaPlayback = YES;
+        
+        //设置configur对象的preferences属性的信息
+        WKPreferences *preferences = [[WKPreferences alloc] init];
+        _wkConfig.preferences = preferences;
+        
+        //是否允许与js进行交互，默认是YES的，如果设置为NO，js的代码就不起作用了
+        preferences.javaScriptEnabled = YES;
+        //        preferences.javaScriptCanOpenWindowsAutomatically = YES;
+        
+    }
+    return _wkConfig;
+}
+
+- (WKWebView *)wkWebView {
+    if (!_wkWebView) {
+        
+
+        _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, MainScreenWidth, MainScreenHeight) configuration:self.wkConfig];
+
+        
+        
+        
+        _wkWebView.navigationDelegate = self;
+        
+        _wkWebView.UIDelegate = self;
+        
+        [self.view addSubview:_wkWebView];
+        
+    }
+    return _wkWebView;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = csBlackColor;
+    self.wkWebView.hidden = NO;
     self.title = @"注册";
-    self.contentLabel.text = @"1、商标查询存在盲期，从商标局接受注册申请到录入数据库，其中有3-4个月的延迟期。\n\n2、在查询盲期内，可能会存在已有相同或类似的商标提交。\n\n3、商标总局对申请商标采用在先原则和近似原则的审核方式";
+    [self startLoad];
+
 }
 
 
-
-
-- (IBAction)clickRegisterButtonDone:(UIButton *)sender {
-    if (csCharacterIsBlank(CSGetToken)) {
-        [CSUtility showLoginViewController];
-        return;
-    }
-    RegisterFirstStepViewController *new = [RegisterFirstStepViewController new];
-    [self.navigationController pushViewController:new animated:YES];
-   
+- (void)startLoad {
+    
+    NSString *urlString = @"http://www.niusb.com/zhuce.html";
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+ 
+    [self.wkWebView loadRequest:request];
 }
+#pragma mark - WKWKNavigationDelegate Methods
+
+/*
+ *5.在WKWebViewd的代理中展示进度条，加载完成后隐藏进度条
+ */
+
+//开始加载
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
+    CSLog(@"开始加载网页");
+
+    
+}
+
+//加载完成
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    CSLog(@"加载完成");
+
+}
+
+//加载失败
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+    CSLog(@"加载失败");
+
+}
+
+    
 @end

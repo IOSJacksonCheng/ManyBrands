@@ -53,7 +53,7 @@
             
             self.titleLabel.text =  [NSString stringWithFormat:@"商品名:%@",CSGetResult[@"goods_name"]];
             
-            self.contentLabel.text =  [NSString stringWithFormat:@"注册号:%@\n\n持有人:%@\n\n有效期限:%@至%@\n\n类似群组:%@\n\n商品列表:%@\n\n转让流程\n\n1、选择商标>2、商标报价>3、签订合同>4、办理公证>5、确认手续>6、交付证书>7、完整转让",CSGetResult[@"goods_sn"],CSGetResult[@"applicantcn"], CSGetResult[@"create_time"], CSGetResult[@"deadline"], CSGetResult[@"keywords"], CSGetResult[@"goods_remark"]];
+            self.contentLabel.text =  [NSString stringWithFormat:@"注册号:%@ 商标类别:%@\n\n持有人:%@ \n\n有效期限:%@至%@\n\n类似群组:%@\n\n商品列表:%@\n\n转让流程\n\n1、选择商标>2、商标报价>3、签订合同>4、办理公证>5、确认手续>6、交付证书>7、完整转让",CSGetResult[@"goods_sn"],CSGetResult[@"cat_id"],CSGetResult[@"applicantcn"], CSGetResult[@"create_time"], CSGetResult[@"deadline"], CSGetResult[@"keywords"], CSGetResult[@"goods_remark"]];
             
             
             
@@ -110,7 +110,7 @@
     
     moneyTitleLabel.textColor = csBlackColor;
     moneyTitleLabel.font = csCharacterFont_16;
-    moneyTitleLabel.text = @"商城价:";
+    moneyTitleLabel.text = @"一口价:";
     [firstScrollView addSubview:moneyTitleLabel];
     
     self.moneyLabel = [[UILabel alloc] initWithFrame:CGRectMake(moneyTitleLabel.x + moneyTitleLabel.width, moneyTitleLabel.y, 100, 45)];

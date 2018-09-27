@@ -81,7 +81,7 @@ CGFloat const AD_Height = 250;
     
     CSTitleSearchView *searchView = [[CSTitleSearchView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 35)];
     
-    searchView.intrinsicContentSize = CGSizeMake(self.view.width - 120, 35);
+    searchView.intrinsicContentSize = CGSizeMake(self.view.width - 30, 35);
     
      self.navigationItem.titleView = searchView;
     
@@ -89,12 +89,12 @@ CGFloat const AD_Height = 250;
 //
 //    [button setBackgroundImage:DotaImageName(@"touzike") forState:UIControlStateNormal];
     
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"投知客" style:UIBarButtonItemStylePlain target:self action:nil];
-    [leftItem setTitleTextAttributes:@{
-                                       NSFontAttributeName:            [UIFont systemFontOfSize:18],
-                                       NSForegroundColorAttributeName: csWhiteColor }
-                            forState:UIControlStateNormal];
-    self.navigationItem.leftBarButtonItem = leftItem;
+//    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"投知客" style:UIBarButtonItemStylePlain target:self action:nil];
+//    [leftItem setTitleTextAttributes:@{
+//                                       NSFontAttributeName:            [UIFont systemFontOfSize:18],
+//                                       NSForegroundColorAttributeName: csWhiteColor }
+//                            forState:UIControlStateNormal];
+//    self.navigationItem.leftBarButtonItem = leftItem;
 }
 - (void)configTableView {
     self.homeTableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
