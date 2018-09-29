@@ -18,4 +18,5 @@
 + (NSMutableArray *)getApplyPersonListModelArray:(id)responseObject;
 + (NSMutableArray *)getSuperClassListModelArray:(id)responseObject;
 + (NSMutableArray *)getCategoryClassIdListModelArray:(id)responseObject;
++ (NSMutableArray *)getSearchFreeResultListModelArray:(id)responseObject;
 @end

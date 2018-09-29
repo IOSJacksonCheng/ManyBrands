@@ -92,6 +92,11 @@
 		239B1F8F21522AD000EAA387 /* RegisterSureOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239B1F8D21522AD000EAA387 /* RegisterSureOrderViewController.xib */; };
 		239B1F9C215273E500EAA387 /* RegisterTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 239B1F9A215273E500EAA387 /* RegisterTitleCollectionViewCell.m */; };
 		239B1F9D215273E500EAA387 /* RegisterTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 239B1F9B215273E500EAA387 /* RegisterTitleCollectionViewCell.xib */; };
+		23B2A016215F7ABC0015829C /* SearchFreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B2A014215F7ABC0015829C /* SearchFreeViewController.m */; };
+		23B2A017215F7ABC0015829C /* SearchFreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B2A015215F7ABC0015829C /* SearchFreeViewController.xib */; };
+		23B2A01B215F7CC20015829C /* SearchFreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B2A019215F7CC20015829C /* SearchFreeTableViewCell.m */; };
+		23B2A01C215F7CC20015829C /* SearchFreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B2A01A215F7CC20015829C /* SearchFreeTableViewCell.xib */; };
+		23B793B3215F7E9C00D56321 /* SearchFreeResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B793B2215F7E9C00D56321 /* SearchFreeResultModel.m */; };
 		23C56E3A213ED0D9008D519D /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E38213ED0D9008D519D /* SearchResultViewController.m */; };
 		23C56E3B213ED0D9008D519D /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23C56E39213ED0D9008D519D /* SearchResultViewController.xib */; };
 		23C56E3F213F74DC008D519D /* AllClassTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23C56E3D213F74DC008D519D /* AllClassTypeViewController.m */; };
@@ -259,6 +264,14 @@
 		239B1F99215273E500EAA387 /* RegisterTitleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterTitleCollectionViewCell.h; sourceTree = "<group>"; };
 		239B1F9A215273E500EAA387 /* RegisterTitleCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterTitleCollectionViewCell.m; sourceTree = "<group>"; };
 		239B1F9B215273E500EAA387 /* RegisterTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterTitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		23B2A013215F7ABC0015829C /* SearchFreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchFreeViewController.h; sourceTree = "<group>"; };
+		23B2A014215F7ABC0015829C /* SearchFreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFreeViewController.m; sourceTree = "<group>"; };
+		23B2A015215F7ABC0015829C /* SearchFreeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFreeViewController.xib; sourceTree = "<group>"; };
+		23B2A018215F7CC20015829C /* SearchFreeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchFreeTableViewCell.h; sourceTree = "<group>"; };
+		23B2A019215F7CC20015829C /* SearchFreeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFreeTableViewCell.m; sourceTree = "<group>"; };
+		23B2A01A215F7CC20015829C /* SearchFreeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchFreeTableViewCell.xib; sourceTree = "<group>"; };
+		23B793B1215F7E9C00D56321 /* SearchFreeResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchFreeResultModel.h; sourceTree = "<group>"; };
+		23B793B2215F7E9C00D56321 /* SearchFreeResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFreeResultModel.m; sourceTree = "<group>"; };
 		23C56E37213ED0D9008D519D /* SearchResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultViewController.h; sourceTree = "<group>"; };
 		23C56E38213ED0D9008D519D /* SearchResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultViewController.m; sourceTree = "<group>"; };
 		23C56E39213ED0D9008D519D /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
@@ -429,6 +442,9 @@
 				23C56E48213FAB4A008D519D /* SystemSearchViewController.h */,
 				23C56E49213FAB4A008D519D /* SystemSearchViewController.m */,
 				23C56E4A213FAB4A008D519D /* SystemSearchViewController.xib */,
+				23B2A013215F7ABC0015829C /* SearchFreeViewController.h */,
+				23B2A014215F7ABC0015829C /* SearchFreeViewController.m */,
+				23B2A015215F7ABC0015829C /* SearchFreeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -438,6 +454,8 @@
 			children = (
 				234C30AF213D13DF00C13551 /* HomePageModel.h */,
 				234C30B0213D13DF00C13551 /* HomePageModel.m */,
+				23B793B1215F7E9C00D56321 /* SearchFreeResultModel.h */,
+				23B793B2215F7E9C00D56321 /* SearchFreeResultModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,6 +477,9 @@
 				23C56E43213F7559008D519D /* AllClassCollectionViewCell.xib */,
 				236C0D40214F7EE600FE58D4 /* CSTitleSearchView.h */,
 				236C0D41214F7EE600FE58D4 /* CSTitleSearchView.m */,
+				23B2A018215F7CC20015829C /* SearchFreeTableViewCell.h */,
+				23B2A019215F7CC20015829C /* SearchFreeTableViewCell.m */,
+				23B2A01A215F7CC20015829C /* SearchFreeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -846,6 +867,7 @@
 				23C56E4C213FAB4A008D519D /* SystemSearchViewController.xib in Resources */,
 				236C0D63214FDADA00FE58D4 /* MySendOutBrandViewController.xib in Resources */,
 				2334AC752122713000694ED7 /* LaunchScreen.storyboard in Resources */,
+				23B2A017215F7ABC0015829C /* SearchFreeViewController.xib in Resources */,
 				234C3087213CD36700C13551 /* RegisterViewController.xib in Resources */,
 				236C0D38214BB92300FE58D4 /* RegisterFirstStepNameTableViewCell.xib in Resources */,
 				239B1F9D215273E500EAA387 /* RegisterTitleCollectionViewCell.xib in Resources */,
@@ -862,6 +884,7 @@
 				236C0D3D214BD4AE00FE58D4 /* RegisterSecondStepViewController.xib in Resources */,
 				236C0D87214FE9A700FE58D4 /* NewApplyPersonViewController.xib in Resources */,
 				23C56E3B213ED0D9008D519D /* SearchResultViewController.xib in Resources */,
+				23B2A01C215F7CC20015829C /* SearchFreeTableViewCell.xib in Resources */,
 				23C8F961213E2B3F001A1B7F /* ProductDetailViewController.xib in Resources */,
 				2334AC702122712E00694ED7 /* Main.storyboard in Resources */,
 				2387E37B21424FB100A9C76C /* SendOutDataTableViewCell.xib in Resources */,
@@ -962,9 +985,11 @@
 				23C8F960213E2B3F001A1B7F /* ProductDetailViewController.m in Sources */,
 				236C0D12214B973400FE58D4 /* RegisterFirstStepViewController.m in Sources */,
 				23F2A5202122A8F6004AC881 /* CSCommonNavigationController.m in Sources */,
+				23B2A01B215F7CC20015829C /* SearchFreeTableViewCell.m in Sources */,
 				23F2A50A2122A2A0004AC881 /* HandleRequestTool.m in Sources */,
 				234C30A0213CE7BA00C13551 /* HomePageViewController.m in Sources */,
 				23C8F956213D36E4001A1B7F /* HotProductTableViewCell.m in Sources */,
+				23B793B3215F7E9C00D56321 /* SearchFreeResultModel.m in Sources */,
 				239B1F9C215273E500EAA387 /* RegisterTitleCollectionViewCell.m in Sources */,
 				23F2A52A2122AB64004AC881 /* LoginInViewController.m in Sources */,
 				2334AC782122713000694ED7 /* main.m in Sources */,
@@ -980,6 +1005,7 @@
 				236C0D86214FE9A700FE58D4 /* NewApplyPersonViewController.m in Sources */,
 				236C0D58214FC8EB00FE58D4 /* SendOutBrandViewController.m in Sources */,
 				23F2A50E2122A38B004AC881 /* CSUtility.m in Sources */,
+				23B2A016215F7ABC0015829C /* SearchFreeViewController.m in Sources */,
 				2367026A2150C7E8006C512E /* UIButton+CZHExtension.m in Sources */,
 				236C0D3C214BD4AE00FE58D4 /* RegisterSecondStepViewController.m in Sources */,
 				236C0D5D214FCEC700FE58D4 /* SendOutBrandTableViewCell.m in Sources */,
@@ -1144,7 +1170,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7JC9U8436;
+				DEVELOPMENT_TEAM = 7PP55P64TX;
 				GCC_PREFIX_HEADER = ShangBiao/other/BrandPrefixHeader.pch;
 				INFOPLIST_FILE = ShangBiao/other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1152,7 +1178,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = shoubin.com.ShangBiao;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = shili.com.touzike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1164,7 +1191,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7JC9U8436;
+				DEVELOPMENT_TEAM = 7PP55P64TX;
 				GCC_PREFIX_HEADER = ShangBiao/other/BrandPrefixHeader.pch;
 				INFOPLIST_FILE = ShangBiao/other/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1172,7 +1199,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = shoubin.com.ShangBiao;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = shili.com.touzike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -8,6 +8,7 @@
 
 #import "SystemSearchViewController.h"
 #import "MJRefresh.h"
+#import "SearchFreeViewController.h"
 NSString * const selectColor = @"FD7F57";
 @interface SystemSearchViewController ()
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -22,6 +23,8 @@ NSString * const selectColor = @"FD7F57";
 @property (nonatomic, strong) UITextField *brandOrderTextField;
 
 @property (nonatomic, strong) UITextField *brandPersonTextField;
+
+@property (nonatomic, assign) BOOL clickBasicSearch;
 @end
 
 @implementation SystemSearchViewController
@@ -43,6 +46,7 @@ NSString * const selectColor = @"FD7F57";
     self.topView.layer.cornerRadius = 5;
     self.topView.layer.borderColor = [UIColor colorWithHexString:selectColor].CGColor;
     self.topView.layer.borderWidth = 1;
+    self.topView.layer.masksToBounds = YES;
 }
 - (void)configScrollView {
     CGFloat scrollViewHeight = MainScreenHeight - 45 - 60;
@@ -217,10 +221,88 @@ NSString * const selectColor = @"FD7F57";
         [self clickProgressButton];
     } else if (sender.tag == 2) {
         //search
+        if (self.clickBasicSearch) {
+            [self sendGetRequestForBasicInfomation];
+        } else {
+              [self sendGetRequestForProgressInfomation];
+        }
         
     }
 }
+- (void)sendGetRequestForBasicInfomation {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"cat_ids"] = self.saveClassArray;
+    parameters[@"goods_name"] = self.productNameTextField.text;
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
+    
+    UIWindow *application = [[UIApplication sharedApplication].delegate window];
+    
+    [application addSubview:hud];
+    
+    //设置对话框文字
+    
+    hud.labelText = @"正在查询中";
+    
+    [hud show:YES];
+    [CSNetworkingManager sendGetRequestWithUrl:CSSearchBasicURL parameters:parameters success:^(id responseObject) {
+          [hud hide:YES];
+        if (CSInternetRequestSuccessful) {
+            NSMutableArray *array = @[].mutableCopy;
+            array = [CSParseManager getSearchFreeResultListModelArray:CSGetResult];
+            [self goToNextControllerWithArray:array];
+        } else {
+            CSShowWrongMessage
+        }
+    } failure:^(NSError *error) {
+          [hud hide:YES];
+        CSInternetFailure
+    }];
+}
+- (void)sendGetRequestForProgressInfomation {
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"apply_num"] = self.brandOrderTextField.text;
+    parameters[@"proposer"] = self.brandPersonTextField.text;
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
+    
+    UIWindow *application = [[UIApplication sharedApplication].delegate window];
+    
+    [application addSubview:hud];
+    
+    //设置对话框文字
+    
+    hud.labelText = @"正在查询中";
+    
+    [hud show:YES];
+    [CSNetworkingManager sendGetRequestWithUrl:CSSearchProgressURL parameters:parameters success:^(id responseObject) {
+        [hud hide:YES];
+        if (CSInternetRequestSuccessful) {
+            NSMutableArray *array = @[].mutableCopy;
+            array = [CSParseManager getSearchFreeResultListModelArray:CSGetResult];
+            [self goToNextControllerWithArray:array];
+        } else {
+            CSShowWrongMessage
+        }
+    } failure:^(NSError *error) {
+          [hud hide:YES];
+        CSInternetFailure
+    }];
+}
+- (void)goToNextControllerWithArray:(NSMutableArray *)array {
+    if (array.count == 0) {
+        CustomWrongMessage(@"该条件下暂无搜索结果")
+        return;
+    }
+    SearchFreeViewController *new = [SearchFreeViewController new];
+    new.listArray = array;
+    if (!self.clickBasicSearch) {
+        new.passPerson = self.brandPersonTextField.text;
+        new.passNum = self.brandOrderTextField.text;
+        new.progressSearch = YES;
+    }
+    [self.navigationController pushViewController:new animated:YES];
+}
 - (void)clickBasisButton {
+    self.clickBasicSearch = YES;
     [self.basisButton setTitleColor:csWhiteColor forState:UIControlStateNormal];
     [self.basisButton setBackgroundColor:[UIColor colorWithHexString:selectColor]];
     
@@ -230,6 +312,7 @@ NSString * const selectColor = @"FD7F57";
      [self.backgroundScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 - (void)clickProgressButton {
+     self.clickBasicSearch = NO;
     [self.progressButton setTitleColor:csWhiteColor forState:UIControlStateNormal];
     [self.progressButton setBackgroundColor:[UIColor colorWithHexString:selectColor]];
     

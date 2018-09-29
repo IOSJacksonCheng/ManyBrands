@@ -14,7 +14,27 @@
 #import "ApplyPersonListModel.h"
 #import "SuperClassIdModel.h"
 #import "CategoryClassIdModel.h"
+#import "SearchFreeResultModel.h"
 @implementation CSParseManager
++ (NSMutableArray *)getSearchFreeResultListModelArray:(id)responseObject {
+    if (![responseObject isKindOfClass:[NSArray class]]) {
+        CSLog(@"\n%s数据错误\n",__func__);
+        return nil;
+    }
+    NSArray *array = responseObject;
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for (int i = 0 ; i < array.count ; i ++) {
+        
+        SearchFreeResultModel *model = [SearchFreeResultModel new];
+        model.regNo = [self handelInternetString:array[i][@"regNo"]];
+        model.tmName = [self handelInternetString:array[i][@"tmName"]];
+        model.applicantCn = [self handelInternetString:array[i][@"applicantCn"]];;
+         model.intCls = [self handelInternetString:array[i][@"intCls"]];;
+        [mutableArray addObject:model];
+    }
+    
+    return mutableArray;
+}
 + (NSMutableArray *)getCategoryClassIdListModelArray:(id)responseObject {
     if (![responseObject isKindOfClass:[NSArray class]]) {
         CSLog(@"\n%s数据错误\n",__func__);

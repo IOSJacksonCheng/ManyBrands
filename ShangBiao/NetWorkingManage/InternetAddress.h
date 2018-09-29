@@ -66,5 +66,8 @@
 
 /** 修改价格 */
 #define CSChangePriceURL @"index.php/api/user/setprice"
-
+/** 商标进度查询 */
+#define CSSearchProgressURL @"index.php/api/search/progress"
+/** 商标库接口基础查询 */
+#define CSSearchBasicURL @"index.php/api/search"
 #endif /* InternetAddress_h */

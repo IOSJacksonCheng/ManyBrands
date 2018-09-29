@@ -79,6 +79,7 @@
     NSMutableDictionary *parameter = [NSMutableDictionary dictionary];
     parameter[@"username"] = self.phoneTextField.text;
     parameter[@"password"] = self.codeTextField.text;
+    [self.view endEditing:YES];
     [CSNetworkingManager sendPostRequestWithUrl:CSLoginURL Parpmeters:parameter success:^(id responseObject) {
         if (CSInternetRequestSuccessful) {
             [[NSUserDefaults standardUserDefaults] setValue: [NSString stringWithFormat:@"%@",CSGetResult[@"token"]] forKey:@"CSGetToken"];

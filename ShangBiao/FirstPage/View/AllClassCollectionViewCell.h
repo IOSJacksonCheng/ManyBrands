@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface AllClassCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *classNameLabel;
 

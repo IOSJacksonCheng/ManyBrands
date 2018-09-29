@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HomePageModel.h"
+
 @interface HomePageBrandTableViewCell : UITableViewCell
 @property (nonatomic, strong) HomePageModel *leftModel;
 @property (nonatomic, strong) HomePageModel *rightModel;
